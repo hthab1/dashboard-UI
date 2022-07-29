@@ -1,0 +1,84 @@
+.sidebar {
+  width: 18vw;
+  height: 100vh;
+  box-shadow: 0px 0px 10px 0px var(--color-primary);
+  display: flex;
+  flex-direction: column;
+  min-width: 250px;
+}
+
+.sidebarLogo {
+  width: 250px;
+  height: fit-content;
+  object-fit: contain;
+  display: flex;
+  margin-top: 5px;
+}
+
+.sidebarMenus {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: scroll;
+  flex: 1;
+  padding-top: 20px;
+  padding-bottom: 50px;
+}
+
+.sidebarMenus::-webkit-scrollbar {
+  display: none;
+}
+
+.sidebarMenu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-inline: 20px;
+  width: 80%;
+  border-radius: 10px;
+  padding-block: 15px;
+  color: var(--color-sidebarMenu);
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  position: relative;
+  transition: all 200ms ease-in-out;
+  cursor: pointer;
+}
+
+.sidebarMenu:hover{
+    transform: scale(1.07);
+}
+
+.sidebarMenuIcon {
+  display: grid;
+  place-items: center;
+  font-size: 24px;
+  width: 24px;
+  margin-right: 20px;
+}
+
+.sidebarMenuArrow {
+  font-size: 14px;
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.sidebarMenuService {
+  font-size: 14px;
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.sidebarMenuServiceNumber {
+  padding: 5px 10px;
+  background-color: var(--color-green);
+  color: var(--color-white);
+  font-size: 14px;
+  display: grid;
+  place-items: center;
+  border-radius: 20px;
+}

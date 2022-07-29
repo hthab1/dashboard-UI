@@ -1,0 +1,131 @@
+.login{
+    width: 100%;
+    height: 100vh;
+    background: var(--color-background);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.loginFormContainer{
+    background-color: var(--color-white);
+    padding: 30px;
+    max-width: 500px;
+    width: 70%;
+    margin-top: 10vh;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.loginLogo{
+    width: 250px;
+    height: fit-content;
+    object-fit: contain;
+    display: flex;
+    margin-top: 5px;
+}
+
+.loginHeader{
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 34px;
+    line-height: 46px;
+    color: var(--color-text);
+    text-align: center;
+}
+
+.loginSubHeader{
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    color: var(--color-text);
+    opacity: 0.6;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.loginRemember{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin-top: 7px;
+}
+
+.rememberLeft{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+}
+
+.rememberText{
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
+    color: var(--color-text);
+    opacity: 0.6;
+}
+
+.rememberRight{
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
+    color: var(--color-text);
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+.rememberCircle{
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.623);
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+}
+
+.rememberSelected{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.623) ;
+    border-radius: 10px;
+}
+
+
+@media (max-width:540px){
+
+    .loginFormContainer{
+        margin-top: 20vh;
+    }
+
+    .loginHeader{
+        font-size: 20px;
+    }
+
+    .loginSubHeader{
+        width: 80%;
+        font-size: 12px;
+    }
+    .loginRemember{
+        width: 90%;
+    }
+
+    .rememberText{
+        font-size: 12px;
+    }
+    .rememberRight{
+        
+        font-size: 12px;
+    }
+}

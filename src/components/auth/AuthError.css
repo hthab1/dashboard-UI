@@ -1,0 +1,14 @@
+.authError{
+    font-size: 14px;
+    display: flex;
+    text-align: center;
+    align-self: center;
+    max-width: 80%;
+    color: var(--color-error);
+}
+
+@media (max-width:540px){
+    .authError{
+        font-size: 12px;
+    }
+}

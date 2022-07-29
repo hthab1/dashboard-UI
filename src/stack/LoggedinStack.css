@@ -1,0 +1,24 @@
+.sidebarMobile{
+    display: none;
+}
+
+@media (max-width:900px){
+    .sidebarDesktop{
+        display: none;
+    }
+
+    .sidebarMobile{
+        display: flex;
+        position: absolute;
+        background-color: white;
+    }
+
+    .sidebarMobileVail{
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        background-color: var(--color-black);
+        opacity: 0.3;
+        z-index: -1;
+    }
+}
