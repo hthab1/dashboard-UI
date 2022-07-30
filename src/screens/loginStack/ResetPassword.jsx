@@ -4,11 +4,9 @@ import Abstract from "../../assets/Abstract.svg";
 import Logo from "../../assets/Logo.svg";
 import AuthInput from "../../components/auth/AuthInput";
 import AuthButton from "../../components/auth/AuthButton";
-import { useStateValue } from "../../StateProvider";
 import AuthError from "../../components/auth/AuthError";
 
 function ResetPassword() {
-  const { state, dispatch } = useStateValue();
   const [password, setPassword] = useState("");
   const [confirm, setConfirm] = useState("");
   const [error, setError] = useState("");

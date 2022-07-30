@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700;900&display=swap");
 
 * {
   margin: 0;
@@ -24,9 +24,12 @@ code {
   --color-black: #000000;
   --color-text: #03014c;
   --color-inputBorder: #03014c4d;
-  --color-error: #FF5274;
-  --color-sidebarMenu : #717579;
-  --color-green :#09BD3C;
+  --color-error: #ff5274;
+  --color-sidebarMenu: #717579;
+  --color-green: #09bd3c;
+  --color-orange: #ff9f34;
+  --color-headerText: #171b1e;
+  --color-imageBackground: #c4c4c4;
 
   --color-primary: #016a5f;
 }
@@ -37,4 +40,12 @@ input {
 
 input:focus {
   outline: none;
+}
+
+.loadedPage {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  width: 100%;
+  background-color: var(--color-background);
 }

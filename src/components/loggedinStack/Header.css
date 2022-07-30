@@ -1,0 +1,232 @@
+.header {
+  display: flex;
+  flex: 1;
+  max-height: 6vh;
+  padding: 10px 30px;
+  padding-top: 15px;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color-white);
+  box-shadow: 3px 0px 5px 0px var(--color-primary);
+}
+
+.headerMenuContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.headerMenu {
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  font-size: 30px;
+  margin-right: 10px;
+}
+
+.headerMenuName {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 28px;
+  color: var(--color-headerText);
+  margin-left: 20px;
+  min-width: 20vw;
+}
+
+.headerSearchContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border: 1px solid var(--color-inputBorder);
+  border-radius: 10px;
+  padding: 7px 20px;
+}
+
+.headerSearchIcon {
+  font-size: 24px;
+  display: grid;
+  place-items: center;
+  color: var(--color-sidebarMenu);
+}
+
+.headerSearchInput {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.headerUserContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.headerIconsContainer {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.headerIconContainer {
+  position: relative;
+}
+
+.headerIcon {
+  font-size: 24px;
+  color: var(--color-sidebarMenu);
+  width: 30px;
+  height: 30px;
+  display: grid;
+  place-items: center;
+  margin-inline: 10px;
+}
+
+.headerIconMail {
+  font-size: 26px;
+}
+
+.headerIconPayment {
+  font-size: 20px;
+}
+
+.headerIconTop {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  text-align: center;
+  color: var(--color-white);
+  background-color: var(--color-inputBorder);
+  padding: 5px 10px;
+  border-radius: 20px;
+  position: absolute;
+  border: 4px solid var(--color-white);
+  bottom: 15px;
+  left: 15px;
+}
+
+.headerIconTopBell {
+  background-color: var(--color-orange);
+}
+
+.headerIconTopMail {
+  background-color: var(--color-error);
+}
+
+.headerIconTopPayment {
+  background-color: var(--color-green);
+}
+
+.headerUser {
+  display: flex;
+  align-items: center;
+  margin-left: 50px;
+}
+
+.headerUserImage {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: var(--color-imageBackground);
+  object-fit: cover;
+}
+
+.headerUserInfo {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+}
+
+.headerUserName {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  margin-bottom: 5px;
+  color: var(--color-headerText);
+}
+
+.headerUserRole {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  color: var(--color-sidebarMenu);
+}
+
+.headerUserMobile{
+    display: none;
+}
+
+.headerIconsContainerMobile{
+    display: none;
+}
+
+@media (max-width:1080px){
+    .headerMenuName{
+        margin-left: 0px;
+        font-size: 26px;
+    }
+
+    .headerSearchContainer{
+        margin-left: 5px;
+        width: 150px;
+    }
+
+    .headerSearchInput{
+        width: 90%;
+    }
+
+    .headerUser{
+        display: none;
+        margin-left: 10px;
+    }
+
+    .headerUserMobile{
+        display: flex;
+    }
+    .headerMenuName{
+        font-size: 20px;
+        min-width: 10vw;
+    }
+}
+
+@media (max-width:800px){
+    .headerIconsContainer{
+        display: none;
+    }
+    
+    .headerSearchContainer{
+        display: none;
+    }
+
+    .headerUserContainer{
+        position: relative;
+    }
+
+    .headerIconsContainerMobile{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        background-color: var(--color-white);
+        top: 8vh;
+        right: -10px;
+        padding: 20px 5px;
+        align-items: center;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px 0px var(--color-primary);
+    }
+
+    .headerIconContainer{
+        margin: 10px 0;
+    }
+
+    .headerChevronDown{
+        font-size: 20px;
+        padding: 10px;
+        border-radius: 30px;
+    }
+}

@@ -5,11 +5,12 @@ import AuthInput from "../../components/auth/AuthInput";
 import AuthButton from "../../components/auth/AuthButton";
 import AuthError from "../../components/auth/AuthError";
 import { useNavigate } from "react-router-dom";
-import { useStateValue } from "../../StateProvider";
+import { useDispatch } from "react-redux";
+import { setUser } from "../../reducers/authReducer";
 
 function Login() {
   const navigate = useNavigate();
-  const { state, dispatch } = useStateValue();
+  const dispatch = useDispatch();
   const [remember, setRemember] = useState(false);
   const [error, setError] = useState("");
   const [email, setEmail] = useState("");
@@ -44,18 +45,22 @@ function Login() {
             >
               {remember && <div className="rememberSelected"></div>}
             </div>
-            <span className="rememberText">Remember me</span>
+            <span
+              className="rememberText"
+              onClick={() => setRemember(!remember)}
+            >
+              Remember me
+            </span>
           </div>
-          <div className="rememberRight" onClick={()=>navigate("/forgot")} >Forgot password?</div>
+          <div className="rememberRight" onClick={() => navigate("/forgot")}>
+            Forgot password?
+          </div>
         </div>
         <AuthButton
           name="Login to continue"
           onClick={() => {
             if (email && password) {
-              dispatch({
-                type: "SET_USER",
-                user: "user",
-              });
+              dispatch(setUser(email));
             } else {
               if (!password) {
                 setError("Password Field can not be empty");

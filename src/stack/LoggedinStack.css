@@ -1,3 +1,19 @@
+.loggedinStack{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+}
+
+.page{
+    display: flex;
+    flex: 1;
+}
+
+.sidebarDesktop{
+    z-index: 999;
+}
+
 .sidebarMobile{
     display: none;
 }
@@ -11,14 +27,11 @@
         display: flex;
         position: absolute;
         background-color: white;
+        z-index: 999;
     }
 
-    .sidebarMobileVail{
-        position: absolute;
-        width: 100vw;
-        height: 100vh;
-        background-color: var(--color-black);
-        opacity: 0.3;
-        z-index: -1;
+    .sidebarMobileSidebar{
+        z-index: 999;
     }
+
 }

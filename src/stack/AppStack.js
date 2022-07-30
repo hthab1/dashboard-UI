@@ -1,12 +1,12 @@
 import React from "react";
-import { useStateValue } from "../StateProvider";
 import LoggedinStack from "./LoggedinStack";
 import LoginStack from "./LoginStack";
+import { useSelector } from "react-redux";
 
 function AppStack() {
-  const { state, dispatch } = useStateValue();
+  const user = useSelector((state) => state.auth.user);
 
-  return <div>{state.user ? <LoggedinStack /> : <LoginStack />}</div>;
+  return <div>{user ? <LoggedinStack /> : <LoginStack />}</div>;
 }
 
 export default AppStack;

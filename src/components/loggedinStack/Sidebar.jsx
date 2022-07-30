@@ -1,37 +1,41 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Sidebar.css";
 import Logo from "../../assets/Logo.svg";
-import { FiGrid } from "react-icons/fi";
+import { FiGrid, FiHome } from "react-icons/fi";
 import {
   AiFillCaretRight,
   AiOutlineTag,
   AiOutlineShoppingCart,
   AiOutlineSetting,
 } from "react-icons/ai";
-import { BsPerson, BsBookshelf, BsMegaphone, BsPower } from "react-icons/bs";
+import {
+  BsPerson,
+  BsBookshelf,
+  BsMegaphone,
+  BsPower,
+  BsDoorOpen,
+} from "react-icons/bs";
 import { BiWrench } from "react-icons/bi";
 import { MdOutlinePeopleAlt } from "react-icons/md";
-import { FiHome } from "react-icons/fi";
-import { useStateValue } from "../../StateProvider";
 import SidebarOption from "./SidebarOption";
+import { useSelector, useDispatch } from "react-redux";
+import { setActiveTab, setMobileSidebar } from "../../reducers/sidebarReducer";
+import { setUser } from "../../reducers/authReducer";
+import { useNavigate } from "react-router-dom";
 
 function Sidebar() {
-  const { state, dispatch } = useStateValue();
+  const active = useSelector((state) => state.sidebar.active);
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const [users, setUsers] = useState(false);
+  const [property, setProperty] = useState(false);
 
   const handleLogout = (e) => {
     e.preventDefault();
-    dispatch({
-      type: "SET_USER",
-      user: null,
-    });
-    dispatch({
-      type: "SET_ACTIVE",
-      active: "dashboard",
-    });
-    dispatch({
-      type: "SET_SIDEBAR",
-      sidebarOpen: false,
-    });
+    dispatch(setUser(""));
+    dispatch(setActiveTab("dashboard"));
+    dispatch(setMobileSidebar(false));
+    navigate("/");
   };
 
   return (
@@ -41,16 +45,11 @@ function Sidebar() {
         <SidebarOption
           name="Dashboard"
           icon={<FiGrid />}
-          active={state.active === "dashboard" && true}
+          active={active === "dashboard" && true}
           onClick={() => {
-            dispatch({
-              type: "SET_ACTIVE",
-              active: "dashboard",
-            });
-            dispatch({
-              type: "SET_SIDEBAR",
-              sidebarOpen: false,
-            });
+            dispatch(setActiveTab("dashboard"));
+            dispatch(setMobileSidebar(false));
+            navigate("/dashboard");
           }}
         />
         <SidebarOption
@@ -58,67 +57,54 @@ function Sidebar() {
           hasSubMenu
           icon={<BsPerson />}
           active={
-            (state.active === "users" ||
-              state.active === "tenants" ||
-              state.active === "home owners" ||
-              state.active === "subscribers") &&
+            (active === "tenants" ||
+              active === "home owners" ||
+              active === "subscribers") &&
             true
           }
           onClick={() => {
-            dispatch({
-              type: "SET_ACTIVE",
-              active: "users",
-            });
+            if (
+              active !== "tenants" &&
+              active !== "home owners" &&
+              active !== "subscribers"
+            ) {
+              setUsers(!users);
+            }
           }}
         />
-        {(state.active === "users" ||
-          state.active === "tenants" ||
-          state.active === "home owners" ||
-          state.active === "subscribers") && (
+        {(users ||
+          active === "tenants" ||
+          active === "home owners" ||
+          active === "subscribers") && (
           <>
             <SidebarOption
               name="Tenants"
               subMenu
-              active={state.active === "tenants" && true}
+              active={active === "tenants" && true}
               onClick={() => {
-                dispatch({
-                  type: "SET_ACTIVE",
-                  active: "tenants",
-                });
-                dispatch({
-                  type: "SET_SIDEBAR",
-                  sidebarOpen: false,
-                });
+                dispatch(setActiveTab("tenants"));
+                dispatch(setMobileSidebar(false));
+                navigate("/users/tenants");
               }}
             />
             <SidebarOption
               name="Home Owners"
               subMenu
-              active={state.active === "home owners" && true}
+              active={active === "home owners" && true}
               onClick={() => {
-                dispatch({
-                  type: "SET_ACTIVE",
-                  active: "home owners",
-                });
-                dispatch({
-                  type: "SET_SIDEBAR",
-                  sidebarOpen: false,
-                });
+                dispatch(setActiveTab("home owners"));
+                dispatch(setMobileSidebar(false));
+                navigate("/users/homeOwners");
               }}
             />
             <SidebarOption
               name="Subscribers"
               subMenu
-              active={state.active === "subscribers" && true}
+              active={active === "subscribers" && true}
               onClick={() => {
-                dispatch({
-                  type: "SET_ACTIVE",
-                  active: "subscribers",
-                });
-                dispatch({
-                  type: "SET_SIDEBAR",
-                  sidebarOpen: false,
-                });
+                dispatch(setActiveTab("subscribers"));
+                dispatch(setMobileSidebar(false));
+                navigate("/users/subscribers");
               }}
             />
           </>
@@ -127,69 +113,56 @@ function Sidebar() {
         <SidebarOption
           name="Property"
           hasSubMenu
-          icon={<BsPerson />}
+          icon={<FiHome />}
           active={
-            (state.active === "property" ||
-              state.active === "add property" ||
-              state.active === "view properties" ||
-              state.active === "manage developments") &&
+            (active === "add property" ||
+              active === "view properties" ||
+              active === "manage developments") &&
             true
           }
           onClick={() => {
-            dispatch({
-              type: "SET_ACTIVE",
-              active: "property",
-            });
+            if (
+              active !== "add property" &&
+              active !== "view properties" &&
+              active !== "manage developments"
+            ) {
+              setProperty(!property);
+            }
           }}
         />
-        {(state.active === "property" ||
-          state.active === "add property" ||
-          state.active === "view properties" ||
-          state.active === "manage developments") && (
+        {(property ||
+          active === "add property" ||
+          active === "view properties" ||
+          active === "manage developments") && (
           <>
             <SidebarOption
               name="Add Property"
               subMenu
-              active={state.active === "add property" && true}
+              active={active === "add property" && true}
               onClick={() => {
-                dispatch({
-                  type: "SET_ACTIVE",
-                  active: "add property",
-                });
-                dispatch({
-                  type: "SET_SIDEBAR",
-                  sidebarOpen: false,
-                });
+                dispatch(setActiveTab("add property"));
+                dispatch(setMobileSidebar(false));
+                navigate("/property/addProperty");
               }}
             />
             <SidebarOption
               name="View Properties"
               subMenu
-              active={state.active === "view properties" && true}
+              active={active === "view properties" && true}
               onClick={() => {
-                dispatch({
-                  type: "SET_ACTIVE",
-                  active: "view properties",
-                });
-                dispatch({
-                  type: "SET_SIDEBAR",
-                  sidebarOpen: false,
-                });
+                dispatch(setActiveTab("view properties"));
+                dispatch(setMobileSidebar(false));
+                navigate("/property/properties");
               }}
             />
             <SidebarOption
               name="Manage Developments"
               subMenu
-              active={state.active === "manage developments" && true}
+              active={active === "manage developments" && true}
               onClick={() => {
-                dispatch({
-                  type: "SET_ACTIVE",
-                  active: "manage developments",
-                });
-                dispatch({
-                  type: "SET_SIDEBAR",
-                  sidebarOpen: false,
-                });
+                dispatch(setActiveTab("manage developments"));
+                dispatch(setMobileSidebar(false));
+                navigate("/property/developments");
               }}
             />
           </>
@@ -198,107 +171,82 @@ function Sidebar() {
         <SidebarOption
           name="Subscriptions"
           icon={<AiOutlineTag />}
-          active={state.active === "subscriptions" && true}
+          active={active === "subscriptions" && true}
           onClick={() => {
-            dispatch({
-              type: "SET_ACTIVE",
-              active: "subscriptions",
-            });
-            dispatch({
-              type: "SET_SIDEBAR",
-              sidebarOpen: false,
-            });
+            dispatch(setActiveTab("subscriptions"));
+            dispatch(setMobileSidebar(false));
+            navigate("/subscriptions");
           }}
         />
         <SidebarOption
           name="Service Charge"
           icon={<AiOutlineShoppingCart />}
           service={27}
-          active={state.active === "service charge" && true}
+          active={active === "service charge" && true}
           onClick={() => {
-            dispatch({
-              type: "SET_ACTIVE",
-              active: "service charge",
-            });
-            dispatch({
-              type: "SET_SIDEBAR",
-              sidebarOpen: false,
-            });
+            dispatch(setActiveTab("service charge"));
+            dispatch(setMobileSidebar(false));
+            navigate("/serviceCharge");
           }}
         />
         <SidebarOption
           name="Maintenance"
           icon={<BiWrench />}
-          active={state.active === "maintenance" && true}
+          active={active === "maintenance" && true}
           onClick={() => {
-            dispatch({
-              type: "SET_ACTIVE",
-              active: "maintenance",
-            });
-            dispatch({
-              type: "SET_SIDEBAR",
-              sidebarOpen: false,
-            });
+            dispatch(setActiveTab("maintenance"));
+            dispatch(setMobileSidebar(false));
+            navigate("/requests");
+          }}
+        />
+        <SidebarOption
+          name="Visitors Pass"
+          icon={<BsDoorOpen />}
+          active={active === "visitors pass" && true}
+          onClick={() => {
+            dispatch(setActiveTab("visitors pass"));
+            dispatch(setMobileSidebar(false));
+            navigate("/visitorsPass");
           }}
         />
         <SidebarOption
           name="Inventory"
           icon={<BsBookshelf />}
-          active={state.active === "inventory" && true}
+          active={active === "inventory" && true}
           onClick={() => {
-            dispatch({
-              type: "SET_ACTIVE",
-              active: "inventory",
-            });
-            dispatch({
-              type: "SET_SIDEBAR",
-              sidebarOpen: false,
-            });
+            dispatch(setActiveTab("inventory"));
+            dispatch(setMobileSidebar(false));
+            navigate("/inventory");
           }}
         />
         <SidebarOption
           name="Announcements"
           icon={<BsMegaphone />}
-          active={state.active === "announcemnets" && true}
+          active={active === "announcemnets" && true}
           onClick={() => {
-            dispatch({
-              type: "SET_ACTIVE",
-              active: "announcemnets",
-            });
-            dispatch({
-              type: "SET_SIDEBAR",
-              sidebarOpen: false,
-            });
+            dispatch(setActiveTab("announcemnets"));
+            dispatch(setMobileSidebar(false));
+            navigate("/announcements");
           }}
         />
         <SidebarOption
           name="Settings"
           icon={<AiOutlineSetting />}
-          active={state.active === "settings" && true}
+          active={active === "settings" && true}
           onClick={() => {
-            dispatch({
-              type: "SET_ACTIVE",
-              active: "settings",
-            });
-            dispatch({
-              type: "SET_SIDEBAR",
-              sidebarOpen: false,
-            });
+            dispatch(setActiveTab("settings"));
+            dispatch(setMobileSidebar(false));
+            navigate("/settings");
           }}
         />
         <SidebarOption
           name="Staff"
           icon={<MdOutlinePeopleAlt />}
-          active={state.active === "staff" && true}
+          active={active === "staff" && true}
           onClick={() => {
-            dispatch({
-              type: "SET_ACTIVE",
-              active: "staff",
-            });
-            dispatch({
-              type: "SET_SIDEBAR",
-              sidebarOpen: false,
-            });
+            dispatch(setActiveTab("staff"));
+            dispatch(setMobileSidebar(false));
+            navigate("/staff");
           }}
         />
         <SidebarOption
