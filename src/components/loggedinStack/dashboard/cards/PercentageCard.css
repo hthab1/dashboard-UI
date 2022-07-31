@@ -1,0 +1,44 @@
+.percentageCard {
+  width: 290px;
+  height: 120px;
+  background-color: var(--color-white);
+  border-radius: 20px;
+  box-shadow: 0px 0px 5px 0px var(--color-primary);
+  display: flex;
+  margin: 10px;
+  color: var(--color-headerText);
+}
+
+.percentageCardContent {
+  display: flex;
+  flex: 1;
+  margin: 20px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.percentageCardContentLeft {
+  display: flex;
+  flex-direction: column;
+}
+
+.percentageCardNumber {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 40px;
+  /* line-height: 60px; */
+}
+
+.percentageCardName {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.percentageCardProgress{
+    width: 85px;
+    height: 85px;
+}

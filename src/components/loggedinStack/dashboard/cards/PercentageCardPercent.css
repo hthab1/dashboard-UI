@@ -1,0 +1,56 @@
+.percentageCardPercent {
+  width: 290px;
+  height: 120px;
+  background-color: var(--color-white);
+  border-radius: 20px;
+  box-shadow: 0px 0px 5px 0px var(--color-primary);
+  display: flex;
+  margin: 10px;
+  color: var(--color-headerText);
+}
+
+.percentageCardPercentContent {
+  display: flex;
+  flex: 1;
+  margin: 20px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.percentageCardPercentContentLeft {
+  display: flex;
+  flex-direction: column;
+}
+
+.percentageCardPercentNumber {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 32px;
+  line-height: 38px;
+  /* line-height: 60px; */
+}
+
+.percentageCardPercentName {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: var(--color-sidebarMenu);
+}
+
+.percentageCardPercentProgress {
+  width: 70px;
+  height: 70px;
+}
+
+.percentageCardPercentTarget {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: var(--color-sidebarMenu);
+  margin-top: 10px;
+}

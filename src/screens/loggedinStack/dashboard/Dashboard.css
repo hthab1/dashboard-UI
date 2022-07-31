@@ -5,3 +5,23 @@
     width: 100%;
     background-color: var(--color-background);
 }
+
+.dashboardContent{
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    align-self: center;
+    margin: 20px 10px;
+    overflow: scroll;
+    padding-bottom: 50px;
+}
+
+.dashboardContent::-webkit-scrollbar{
+    display: none;
+}
+
+.dashboardContentTopPercentages{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
