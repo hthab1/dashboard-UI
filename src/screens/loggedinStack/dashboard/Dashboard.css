@@ -25,3 +25,40 @@
     flex-wrap: wrap;
     justify-content: space-evenly;
 }
+
+.dashboardContentBottomPercentages{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-inline: 5px;
+}
+
+.dashboardContentBottomPercentagesLeftContainer{
+    flex: 1;
+    min-width: 50%;
+}
+
+.dashboardContentBottomPercentagesLeft{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.dashboardContentBottomPercentagesRight{
+    display: flex;
+    flex: 1;
+    justify-content: center;
+}
+
+.dashboardContentStatistic{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-inline: 5px;
+}
+
+.dashboardContentStatisticSegmet{
+    display: flex;
+    flex: 1;
+    justify-content: center;
+}
