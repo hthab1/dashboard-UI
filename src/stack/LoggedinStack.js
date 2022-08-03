@@ -19,6 +19,7 @@ import AddProperty from "../screens/loggedinStack/property/addProperty/AddProper
 import Properties from "../screens/loggedinStack/property/viewProperties/Properties";
 import Developments from "../screens/loggedinStack/property/manageDevelopments/Developments";
 import Subscriptions from "../screens/loggedinStack/subscriptions/Subscriptions";
+import AddTenants from "../screens/loggedinStack/users/tenants/addTenant/AddTenants";
 
 function LoggedinStack() {
   const on = useSelector((state) => state.sidebar.mobileSidebar);
@@ -47,6 +48,8 @@ function LoggedinStack() {
 
             {/* users routes */}
             <Route path="/users/tenants" element={<Tenants />} />
+            <Route path="/users/tenants/addTenant" element={<AddTenants />} />
+
             <Route path="/users/homeOwners" element={<HomeOwners />} />
             <Route path="/users/subscribers" element={<Subscribers />} />
 

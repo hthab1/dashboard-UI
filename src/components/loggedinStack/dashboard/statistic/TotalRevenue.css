@@ -1,0 +1,220 @@
+.revenue {
+  width: 90%;
+  max-width: 800px;
+  height: fit-content;
+  background-color: var(--color-white);
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px 0px var(--color-primary);
+  display: grid;
+  place-items: center;
+  margin: 10px;
+  color: var(--color-headerText);
+}
+
+.revenueContent {
+  display: flex;
+  flex-direction: column;
+  width: 50vw;
+  max-width: 90%;
+  min-width: 80%;
+  height: 90%;
+}
+
+.revenueContentHeader {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.revenueHeaderLeft {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.revenueHeaderRight {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.revenueChoice {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  color: var(--color-sidebarMenu);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  margin-inline: 5px;
+  cursor: pointer;
+}
+
+.revenueChoice > span {
+  margin-inline: 10px;
+}
+
+.revenueChoiceBorder {
+  width: 100%;
+  height: 0;
+  border-radius: 10px;
+  background-color: var(--color-primary);
+}
+
+.revenueAmountContainer {
+  display: flex;
+  margin-top: 20px;
+}
+
+.revenueAmount {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 32px;
+  line-height: 38px;
+  color: #171b1e;
+}
+
+.revenueAmountIncrement {
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+}
+
+.revenueIncrementInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 10px;
+}
+
+.revenueIncrementIcon {
+  font-size: 25px;
+  display: grid;
+  place-items: center;
+}
+
+.revenueIncrementPercent {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 23px;
+  color: #09bd3c;
+}
+
+.revenueIncrementLast {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #717579;
+}
+
+.revenueChart {
+  width: 100%;
+  height: 200px;
+  overflow-x: scroll;
+  margin-block: 20px;
+  display: flex;
+  flex-direction: row;
+}
+
+.revenueChart::-webkit-scrollbar {
+  display: none;
+}
+
+.revenueChartBarContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-inline: 20px;
+  position: relative;
+}
+
+.revenueChartBar {
+  height: 130px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.revenueChartBarOff {
+  background: #eeeeee;
+  width: 2px;
+  height: 100%;
+  position: absolute;
+}
+
+.revenueChartBarOn {
+  width: 15px;
+  min-height: 10px;
+  border-radius: 40px;
+  background-color: var(--color-primary);
+  z-index: 3;
+}
+
+.revenueChartNum {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+
+  color: #3e4954;
+}
+
+.revenuChartBarInfo {
+  display: none;
+  position: absolute;
+  box-shadow: 0px 0px 5px 0px var(--color-primary);
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  color: #737b8b;
+  padding: 10px 20px;
+  border-radius: 5px;
+  z-index: 999;
+  background-color: var(--color-white);
+  left: 0;
+}
+
+.revenueChartBar:hover .revenuChartBarInfo {
+  display: flex;
+}
+
+.revenueChartPadding{
+    padding: 0px 100px ;
+}
+
+@media (max-width: 590px) {
+  .revenueHeaderLeft {
+    font-size: 16px;
+  }
+
+  .revenueChoice {
+    font-size: 12px;
+  }
+
+  .revenueAmount{
+    font-size: 22px;
+  }
+
+  .revenueIncrementPercent{
+    font-size: 14px;
+  }
+
+  .revenueIncrementLast{
+    font-size: 12px;
+  }
+}

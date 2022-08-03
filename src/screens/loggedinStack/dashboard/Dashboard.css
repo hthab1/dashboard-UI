@@ -62,3 +62,15 @@
     flex: 1;
     justify-content: center;
 }
+
+.dashboardContentTotalRevenue{
+    display: flex;
+    justify-content: center;
+}
+
+.dashboardContentBottom{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-inline: 5px;
+}

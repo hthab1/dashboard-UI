@@ -4,6 +4,8 @@ import PercentageCardPercent from "../../../components/loggedinStack/dashboard/c
 import BarChart from "../../../components/loggedinStack/dashboard/chart/BarChart";
 import RentStatistic from "../../../components/loggedinStack/dashboard/statistic/RentStatistic";
 import SalesStatistic from "../../../components/loggedinStack/dashboard/statistic/SalesStatistic";
+import Summary from "../../../components/loggedinStack/dashboard/statistic/Summary";
+import TotalRevenue from "../../../components/loggedinStack/dashboard/statistic/TotalRevenue";
 import Header from "../../../components/loggedinStack/Header";
 import { barChart } from "../../../data/barChart";
 import "./Dashboard.css";
@@ -107,6 +109,12 @@ function Dashboard() {
           <div className="dashboardContentStatisticSegmet">
             <RentStatistic />
           </div>
+        </div>
+        <div className="dashboardContentTotalRevenue">
+          <TotalRevenue />
+        </div>
+        <div className="dashboardContentBottom">
+          <Summary />
         </div>
       </div>
     </div>
