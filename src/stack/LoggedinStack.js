@@ -20,6 +20,9 @@ import Properties from "../screens/loggedinStack/property/viewProperties/Propert
 import Developments from "../screens/loggedinStack/property/manageDevelopments/Developments";
 import Subscriptions from "../screens/loggedinStack/subscriptions/Subscriptions";
 import AddTenants from "../screens/loggedinStack/users/tenants/addTenant/AddTenants";
+import AssignProperty from "../screens/loggedinStack/users/tenants/assignProperty/AssignProperty";
+import SetServiceCharge from "../screens/loggedinStack/users/tenants/setServiceCharge/SetServiceCharge";
+import AddTenantConfirmation from "../screens/loggedinStack/users/tenants/addTenantConfirmation/AddTenantConfirmation";
 
 function LoggedinStack() {
   const on = useSelector((state) => state.sidebar.mobileSidebar);
@@ -49,6 +52,9 @@ function LoggedinStack() {
             {/* users routes */}
             <Route path="/users/tenants" element={<Tenants />} />
             <Route path="/users/tenants/addTenant" element={<AddTenants />} />
+            <Route path="/users/tenants/assignProperty" element={<AssignProperty />} />
+            <Route path="/users/tenants/setServiceCharge" element={<SetServiceCharge />} />
+            <Route path="/users/tenants/addTenantConfirmation" element={<AddTenantConfirmation />} />
 
             <Route path="/users/homeOwners" element={<HomeOwners />} />
             <Route path="/users/subscribers" element={<Subscribers />} />

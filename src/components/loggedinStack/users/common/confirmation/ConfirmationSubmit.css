@@ -1,0 +1,26 @@
+.confirmationSubmit {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  gap: 10%;
+  align-items: center;
+}
+
+.confirmationSubmitButton {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.confirmationSubmitBack{
+    background-color: var(--color-white);
+    color: var(--color-headerText);
+    border: 1px solid var(--color-inputBorder);
+}

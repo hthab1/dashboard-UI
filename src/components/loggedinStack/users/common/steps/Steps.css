@@ -30,22 +30,22 @@
   z-index: 999;
 }
 
-.stepsFirstStep{
-    font-family: "Poppins";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 20px;
-    color: #464a53;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    width: 50px;
-    height: 50px;
-    border-radius: 50px;
-    background-color: var(--color-white);
-    border: 2px solid #dddfe1;
+.stepsFirstStep {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #464a53;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  background-color: var(--color-white);
+  border: 2px solid #dddfe1;
 }
 
 .stepsStep {
@@ -72,7 +72,7 @@
   width: 100%;
   height: 20%;
   right: 50%;
-  background: linear-gradient(0deg, #F7F7F7, #F7F7F7), #464A53;
+  background: linear-gradient(0deg, #f7f7f7, #f7f7f7), #464a53;
   z-index: -1;
 }
 
@@ -86,13 +86,76 @@
   text-align: center;
 }
 
-
-.stepsStepActive{
-    background: linear-gradient(90deg, #00695E 0%, #16C6B3 100%), #464A53;
-    color: var(--color-white);
-    border: none;
+.stepsStepActive {
+  background: linear-gradient(90deg, #00695e 0%, #16c6b3 100%), #464a53;
+  color: var(--color-white);
+  border: none;
 }
 
-.q{
+.stepsStepActive::before {
+  background: linear-gradient(90deg, #00695e 0%, #16c6b3 100%), #464a53;
+}
+
+.stepIndex1 {
+  z-index: 4;
+}
+
+.stepIndex2 {
+  z-index: 3;
+}
+
+.stepIndex3 {
+  z-index: 2;
+}
+
+.stepIndex4 {
+  z-index: 1;
+}
+
+.stepsNameActive {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+  color: #464a53;
+}
+
+.stepsNameFirst{
+  padding-top: 10px;
+}
+
+@media (max-width:1140px){
+  .stepsName{
+    display: none;
+  }
+}
+
+@media (max-width:900px){
+  .stepsName{
+    display: flex;
+    font-size: 16px;
+  }
+}
+
+@media (max-width:800px){
+  .stepsName{
+    display: none;
+  }
+
+  .stepsStep{
+    width: 30px;
+    height: 30px;
+    font-size: 14px;
+  }
+
+  .stepsStepActive{
+    width: 35px;
+    height: 35px;
+    font-size: 14px;
+  }
+
+  .stepsContent{
+    width: 90%;
     z-index: 1;
+  }
 }

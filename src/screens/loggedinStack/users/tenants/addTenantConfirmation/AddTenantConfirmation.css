@@ -1,0 +1,13 @@
+.addTenantConfirmationFormcontainer {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: scroll;
+  justify-content: flex-start;
+  align-items: center;
+  padding-block: 50px;
+}
+
+.addTenantConfirmationFormcontainer::-webkit-scrollbar {
+  display: none;
+}

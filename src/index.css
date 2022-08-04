@@ -32,6 +32,8 @@ code {
   --color-imageBackground: #c4c4c4;
 
   --color-primary: #016a5f;
+
+  --card-shadow: 0px 0px 3px 0px var(--color-primary);
 }
 
 input {
@@ -39,6 +41,24 @@ input {
 }
 
 input:focus {
+  outline: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+select {
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAUCAMAAACtdX32AAAAdVBMVEUAAAD///8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAhMdQaAAAAJ3RSTlMAAAECAwQGBwsOFBwkJTg5RUZ4eYCHkJefpaytrsXGy8zW3+Do8vNn0bsyAAAAYElEQVR42tXROwJDQAAA0Ymw1p9kiT+L5P5HVEi3qJn2lcPjtIuzUIJ/rhIGy762N3XaThqMN1ZPALsZPEzG1x8LrFL77DHBnEMxBewz0fJ6LyFHTPL7xhwzWYrJ9z22AqmQBV757MHfAAAAAElFTkSuQmCC);
+  background-position: 100%;
+  background-repeat: no-repeat;
+}
+
+select:focus{
   outline: none;
 }
 
@@ -50,19 +70,19 @@ input:focus {
   background-color: var(--color-background);
 }
 
-.board{
+.board {
   width: 100%;
   height: 90vh;
 }
 
-.boardContent{
+.boardContent {
   margin: 40px;
   display: flex;
   flex-direction: column;
   height: 82vh;
 }
 
-.card{
+.card {
   background-color: var(--color-white);
   border-radius: 10px;
   box-shadow: 0px 0px 5px 0px var(--color-primary);
@@ -71,8 +91,8 @@ input:focus {
   color: var(--color-headerText);
 }
 
-@media (max-width:540px){
-  .boardContent{
+@media (max-width: 540px) {
+  .boardContent {
     margin: 20px;
     height: 87vh;
   }

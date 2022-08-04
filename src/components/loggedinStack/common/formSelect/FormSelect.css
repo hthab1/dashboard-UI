@@ -1,0 +1,52 @@
+.formSelect {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.formSelectLabel {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 20px;
+  color: var(--color-headerText);
+  margin-bottom: 10px;
+}
+
+.formSelectContainer{
+    width: 95%;
+    margin-bottom: 10px;
+}
+
+.formSelectError {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--color-error);
+}
+
+@media (max-width: 600px) {
+  .formSelectSelect {
+    width: 85%;
+    padding-inline: 20px;
+    font-size: 14px;
+  }
+
+  .formSelectContainer{
+    width: 100%;
+    font-size: 14px !important;
+  }
+
+  .formSelectLabel {
+    font-size: 14px;
+  }
+
+  .formSelectError {
+    font-size: 12px;
+  }
+}

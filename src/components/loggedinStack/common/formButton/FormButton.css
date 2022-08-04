@@ -1,0 +1,12 @@
+.formButton {
+  padding: 10px 20px;
+  background-color: var(--color-primary);
+  border-radius: 5px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  color: var(--color-white);
+  width: fit-content;
+  cursor: pointer;
+}
