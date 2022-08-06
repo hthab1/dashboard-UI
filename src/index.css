@@ -58,7 +58,7 @@ select {
   background-repeat: no-repeat;
 }
 
-select:focus{
+select:focus {
   outline: none;
 }
 
@@ -89,6 +89,20 @@ select:focus{
   display: flex;
   margin: 10px;
   color: var(--color-headerText);
+}
+
+.globalFormContainer {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: scroll;
+  justify-content: flex-start;
+  align-items: center;
+  padding-block: 50px;
+}
+
+.globalFormContainer::-webkit-scrollbar {
+  display: none;
 }
 
 @media (max-width: 540px) {

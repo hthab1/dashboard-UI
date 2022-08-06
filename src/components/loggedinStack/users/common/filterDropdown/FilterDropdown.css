@@ -1,0 +1,68 @@
+.filterDropdown {
+  border-radius: 15px;
+  box-shadow: var(--card-shadow);
+  background-color: var(--color-white);
+  display: flex;
+  gap: 10px;
+  padding: 10px 0;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  color: #273240;
+  width: 150px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+  z-index: 10;
+}
+
+.filterDropdown > span {
+    display: flex;
+    align-items: center;
+
+}
+
+.filterDropdownBackground{
+    padding: 25px 0;
+    width: 150px;
+    position: absolute;
+}
+
+.filterDropdownDropdown{
+    position: absolute;
+    width: 150px;
+    top: 60px;
+    padding: 10px 0px;
+    background-color: var(--color-white);
+    border-radius: 0px 0px 15px 15px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: var(--card-shadow);
+}
+
+.filterDropdownDropdown > span {
+    margin-left: 20px;
+    font-size: 16px;
+    transition: all 200ms ease-in-out;
+}
+
+.filterDropdownDropdown > span:hover {
+    margin-left: 30px;
+}
+
+@media (max-width:1120px){
+    .filterDropdown{
+        font-size: 16px;
+        width: 120px;
+    }
+
+    .filterDropdownBackground{
+        width: 120px;
+    }
+
+    .filterDropdownDropdown{
+        width: 120px;
+    }
+}

@@ -23,6 +23,10 @@ import AddTenants from "../screens/loggedinStack/users/tenants/addTenant/AddTena
 import AssignProperty from "../screens/loggedinStack/users/tenants/assignProperty/AssignProperty";
 import SetServiceCharge from "../screens/loggedinStack/users/tenants/setServiceCharge/SetServiceCharge";
 import AddTenantConfirmation from "../screens/loggedinStack/users/tenants/addTenantConfirmation/AddTenantConfirmation";
+import AddHomeOwner from "../screens/loggedinStack/users/homeOwners/addHomeOwner/AddHomeOwner";
+import AssignHomeOwnerProperty from "../screens/loggedinStack/users/homeOwners/assignProperty/AssignHomeOwnerProperty";
+import SetHomeOwnerServiceCharge from "../screens/loggedinStack/users/homeOwners/setHomeOwnerServiceCharge/SetHomeOwnerServiceCharge";
+import AddHomeOwnerConfirmation from "../screens/loggedinStack/users/homeOwners/addHomeOwnerConfirmation/AddHomeOwnerConfirmation";
 
 function LoggedinStack() {
   const on = useSelector((state) => state.sidebar.mobileSidebar);
@@ -57,6 +61,11 @@ function LoggedinStack() {
             <Route path="/users/tenants/addTenantConfirmation" element={<AddTenantConfirmation />} />
 
             <Route path="/users/homeOwners" element={<HomeOwners />} />
+            <Route path="/users/homeOwners/addHomeOwner" element={<AddHomeOwner />} />
+            <Route path="/users/homeOwners/assignHomeOwnerProperty" element={<AssignHomeOwnerProperty />} />
+            <Route path="/users/homeOwners/setHomeOwnerServiceCharge" element={<SetHomeOwnerServiceCharge />} />
+            <Route path="/users/homeOwners/addHomeOwnerConfirmation" element={<AddHomeOwnerConfirmation />} />
+
             <Route path="/users/subscribers" element={<Subscribers />} />
 
             {/* property routes */}

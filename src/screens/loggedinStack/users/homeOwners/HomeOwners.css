@@ -1,0 +1,147 @@
+
+
+.homeOwnerHeader{
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+
+.homeOwnerHeaderLeft{
+    display: flex;
+    align-items: center;
+    width: 50%;
+    gap: 10px;
+}
+
+.homeOwerAddButton{
+    border-radius: 15px;
+  background-color: var(--color-primary);
+  display: flex;
+  padding: 10px 20px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  color: var(--color-white);
+  width: fit-content;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.homeOwnerSearch{
+    flex: 1;
+}
+
+.homeOwnerHeaderRight{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    width: 50%;
+    justify-content: flex-end;
+}
+
+.homeOwnerFilterButton {
+  border-radius: 15px;
+  background-color: var(--color-primary);
+  display: flex;
+  gap: 10px;
+  padding: 10px 0;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  color: var(--color-white);
+  width: 120px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.homeOwnerFilterIcon {
+  display: flex;
+  align-items: center;
+}
+
+
+.homeOwnerRefresh{
+    border-radius: 15px;
+  background-color: var(--color-orange);
+  display: flex;
+  padding: 10px;
+  font-weight: 600;
+  font-size: 28px;
+  color: var(--color-white);
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  width: fit-content;
+}
+
+@media (max-width:1120px){
+    .homeOwerAddButton{
+        font-size: 16px;
+    }
+
+    .homeOwnerFilterButton{
+        font-size: 16px;
+    }
+
+    .homeOwnerRefresh{
+        font-size: 24px;
+    }
+}
+
+@media (max-width:1050px){
+    .homeOwnerHeader{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .homeOwnerHeaderLeft{
+        width: 90%;
+    }
+
+    .homeOwnerHeaderRight{
+        width: 100%;
+        justify-content: center;
+        margin-top: 10px;
+    }
+}
+
+.homeOwnerContent{
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    overflow-y: scroll;
+    justify-content: center;
+    align-items: flex-start;
+    margin-block: 20px;
+}
+
+.homeOwnerContent::-webkit-scrollbar{
+    display: none;
+}
+
+.homeOwnerOwners{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+@media (max-width:540px){
+
+    .homeOwnerHeaderLeft{
+       display: flex;
+       flex-direction: column;
+       width: 100%;
+       align-items: flex-start;
+    }
+
+    .homeOwnerHeaderRight{
+        justify-content: flex-start;
+    }
+}

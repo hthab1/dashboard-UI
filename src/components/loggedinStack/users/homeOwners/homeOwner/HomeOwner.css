@@ -1,0 +1,148 @@
+.owner {
+    display: flex;
+    box-shadow: var(--card-shadow);
+    width: 99%;
+    align-self: center;
+    margin-block: 10px;
+    border-radius: 10px;
+    background-color: var(--color-white);
+  }
+  
+  .ownerContent {
+    display: flex;
+    flex: 1;
+    margin: 20px;
+  }
+  
+  .ownerImage {
+    background-color: var(--color-imageBackground);
+    width: 70px;
+    height: 70px;
+    border-radius: 10px;
+    margin-right: 20px;
+    object-fit: cover;
+  }
+  
+  .ownerContentInfo {
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+  }
+  
+  .ownerContentInfoSegments {
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+  }
+  
+  .ownerContentInfoSegment {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-inline: 10px;
+  }
+  
+  .ownerId {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    color: #00695e;
+  }
+  
+  .ownerTimestamp {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    color: #737b8b;
+    line-height: 24px;
+  }
+  
+  .ownerSegmentTitle {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: #737b8b;
+    margin-bottom: 10px;
+  }
+  
+  .ownerSegmentMainText {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    color: #273240;
+    line-height: 30px;
+    width: 200px;
+    word-wrap: break-word;
+  }
+  
+  .ownerContentInfoButton {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    color: #00695e;
+    padding: 10px;
+    border: 1px solid #00695e;
+    border-radius: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    width: fit-content;
+    height: fit-content;
+  }
+  
+  .ownerMore {
+    position: relative;
+  }
+  
+  .ownerMoreIcon {
+    font-size: 20px;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .ownerDropdown {
+    position: absolute;
+    background-color: var(--color-white);
+    box-shadow: var(--card-shadow);
+    width: 170px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    right: 10px;
+  }
+  
+  .ownerDropdownChoice {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #737b8b;
+    cursor: pointer;
+    transition: all 100ms ease-in-out;
+  }
+  
+  .ownerDropdownChoice:hover{
+      transform: scale(1.07);
+  }
+  
+  @media (max-width: 600px) {
+    .ownerImage {
+      margin-right: 10px;
+    }
+  
+    .ownerContentInfoSegment {
+      width: 150px;
+    }
+  
+    .ownerSegmentMainText {
+      font-size: 14px;
+    }
+  }
+  

@@ -2,17 +2,23 @@ import React, { useState } from "react";
 import Header from "../../../../../components/loggedinStack/Header";
 import AddForm from "../../../../../components/loggedinStack/users/common/addForm/AddForm";
 import Steps from "../../../../../components/loggedinStack/users/common/steps/Steps";
-import "./AddTenants.css";
+import "./AddHomeOwner.css";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { setPersonalInfo } from "../../../../../reducers/tenantReducer";
+import { setHomeOwnerPersonalInfo } from "../../../../../reducers/homeOwnerReducer";
 
-function AddTenants() {
+function AddHomeOwner() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  const personalInfo = useSelector((state) => state.tenant.personalInfo);
-  const propertyInfo = useSelector((state) => state.tenant.propertyInfo);
-  const servicePlan = useSelector((state) => state.tenant.servicePlan);
+  const personalInfo = useSelector(
+    (state) => state.homeOwner.homeOwnerPersonalInfo
+  );
+  const propertyInfo = useSelector(
+    (state) => state.homeOwner.homeOwnerPropertyInfo
+  );
+  const servicePlan = useSelector(
+    (state) => state.homeOwner.homeOwnerServicePlan
+  );
 
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
@@ -21,7 +27,7 @@ function AddTenants() {
 
   const handleAdd = (e) => {
     dispatch(
-      setPersonalInfo({
+      setHomeOwnerPersonalInfo({
         firstName: firstName,
         lastName: lastName,
         email: email,
@@ -30,24 +36,24 @@ function AddTenants() {
     );
     if (propertyInfo.estate) {
       if (servicePlan.serviceCharge) {
-        navigate("/users/tenants/addTenantConfirmation");
+        navigate("/users/homeOwners/addHomeOwnerConfirmation");
       } else {
-        navigate("/users/tenants/setServiceCharge");
+        navigate("/users/homeOwners/setHomeOwnerServiceCharge");
       }
     } else {
-      navigate("/users/tenants/assignProperty");
+      navigate("/users/homeOwners/assignHomeOwnerProperty");
     }
   };
 
   return (
-    <div className="loadedPage addTenant">
-      <Header pageName="Add Tenant" />
+    <div className="loadedPage addHomeOwner">
+      <Header pageName="Add Home Owner" />
       <div className="board">
         <div className="boardContent">
-          <div className="addTenantsStepContaienr">
+          <div className="addHomeOwnerStepContaienr">
             <Steps stage={1} />
           </div>
-          <div className="addTenantFormcontainer">
+          <div className="addHomeOwnerFormcontainer">
             <AddForm
               firstName={personalInfo.firstName}
               lastName={personalInfo.lastName}
@@ -66,4 +72,4 @@ function AddTenants() {
   );
 }
 
-export default AddTenants;
+export default AddHomeOwner;

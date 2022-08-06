@@ -1,0 +1,19 @@
+.homeOwnerConfirmation{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40vw;
+}
+
+@media (max-width: 900px){
+    .homeOwnerConfirmation{
+        width: 60vw;
+    }
+}
+
+@media (max-width: 600px){
+    .homeOwnerConfirmation{
+        width: 70vw;
+        padding-inline: 30px;
+    }
+}
