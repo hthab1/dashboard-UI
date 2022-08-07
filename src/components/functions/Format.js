@@ -35,14 +35,13 @@ export function MoneyFloatFormat(number) {
 }
 
 export function TimeFormat(value) {
-
   const date = new Date(value);
 
-  let hour = date.getHours()
-  let stamp = hour > 12 ? "PM" : hour === 0 ? "PM" : "AM"
-  hour = hour > 12 ? hour - 12 : hour
-  let minute = date.getMinutes()
-  minute = minute < 10 ? `0${minute}` : minute
+  let hour = date.getHours();
+  let stamp = hour > 12 ? "PM" : hour === 0 ? "PM" : "AM";
+  hour = hour > 12 ? hour - 12 : hour;
+  let minute = date.getMinutes();
+  minute = minute < 10 ? `0${minute}` : minute;
 
   return hour + ":" + minute + " " + stamp;
 }
@@ -92,4 +91,17 @@ export function FullDateFormat(value) {
   const formattedDate = day + " " + month + ", " + year;
 
   return formattedDate;
+}
+
+export function ShortenMoneyFormat(num) {
+  if (num >= 1000000000) {
+    return "\u20A6" + (num / 1000000000).toFixed(1).replace(/\.0$/, "") + "G";
+  }
+  if (num >= 1000000) {
+    return "\u20A6" + (num / 1000000).toFixed(1).replace(/\.0$/, "") + "M";
+  }
+  if (num >= 1000) {
+    return "\u20A6" + (num / 1000).toFixed(1).replace(/\.0$/, "") + "K";
+  }
+  return "\u20A6" + num;
 }

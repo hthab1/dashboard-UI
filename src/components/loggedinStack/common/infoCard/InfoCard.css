@@ -1,0 +1,63 @@
+.infoCard {
+  width: 220px;
+  background-color: var(--color-white);
+  border-radius: 10px;
+  padding: 20px;
+  min-height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: var(--card-shadow);
+}
+
+.infoContainer{
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+}
+
+.infoInfo {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 32px;
+  line-height: 38px;
+  color: #171b1e;
+  max-width: 140px;
+  word-wrap: break-word;
+}
+
+.infoInfoShow{
+    max-width: 220px;
+}
+
+.infoTitle {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21px;
+  color: #717579;
+}
+
+.infoCardIconContainer {
+  background-color: #EEEEEE;
+  width: 60px;
+  height: 60px;
+  border-radius: 10px;
+  font-size: 36px;
+  color: #717579;
+  display: grid;
+  place-items: center;
+}
+
+@media (max-width:600px){
+    .infoInfo{
+        font-size: 24px;
+        line-height: 26px;
+    }
+    
+    .infoTitle{
+        font-size: 14px;
+    }
+}

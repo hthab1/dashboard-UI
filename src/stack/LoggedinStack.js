@@ -27,6 +27,10 @@ import AddHomeOwner from "../screens/loggedinStack/users/homeOwners/addHomeOwner
 import AssignHomeOwnerProperty from "../screens/loggedinStack/users/homeOwners/assignProperty/AssignHomeOwnerProperty";
 import SetHomeOwnerServiceCharge from "../screens/loggedinStack/users/homeOwners/setHomeOwnerServiceCharge/SetHomeOwnerServiceCharge";
 import AddHomeOwnerConfirmation from "../screens/loggedinStack/users/homeOwners/addHomeOwnerConfirmation/AddHomeOwnerConfirmation";
+import AddSubscriber from "../screens/loggedinStack/users/subscribers/addSubscriber/AddSubscriber";
+import SubscriberProperty from "../screens/loggedinStack/users/subscribers/assignSubscriberProperty/SubscriberProperty";
+import SubscriberPropertyPrice from "../screens/loggedinStack/users/subscribers/SubscriberPropertyPrice/SubscriberPropertyPrice";
+import AddSubscriberConfirmation from "../screens/loggedinStack/users/subscribers/addSubscriberConfirmation/AddSubscriberConfirmation";
 
 function LoggedinStack() {
   const on = useSelector((state) => state.sidebar.mobileSidebar);
@@ -67,6 +71,10 @@ function LoggedinStack() {
             <Route path="/users/homeOwners/addHomeOwnerConfirmation" element={<AddHomeOwnerConfirmation />} />
 
             <Route path="/users/subscribers" element={<Subscribers />} />
+            <Route path="/users/subscribers/addSubscriber" element={<AddSubscriber />} />
+            <Route path="/users/subscribers/assignSubscriberProperty" element={<SubscriberProperty />} />
+            <Route path="/users/subscribers/setSubscriberPropertyPrice" element={<SubscriberPropertyPrice />} />
+            <Route path="/users/subscribers/addSubscriberConfirmation" element={<AddSubscriberConfirmation />} />
 
             {/* property routes */}
             <Route path="/property/addProperty" element={<AddProperty />} />

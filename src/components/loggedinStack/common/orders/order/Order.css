@@ -1,0 +1,143 @@
+.order {
+  display: flex;
+  flex: 1;
+  padding: 15px 20px;
+  background-color: var(--color-white);
+  border: 1px solid #eeeeee;
+  align-items: flex-start;
+}
+
+.order:hover {
+  background-color: transparent;
+}
+
+.orderSegments {
+  display: flex;
+  flex: 1;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding-left: 10px;
+  padding-top: 2px;
+}
+
+.orderSegment {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 19px;
+  color: #171b1e;
+  width: 100px;
+  word-wrap: break-word;
+  display: flex;
+  flex-direction: column;
+}
+
+.orderSegmentStatus{
+    display: flex;
+    justify-content: center;
+}
+
+.titleForOrderCard{
+    display: none;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: #737b8b;
+    margin-bottom: 5px;
+}
+
+.orderStatus{
+    background-color: var(--color-imageBackground);
+    color: var(--color-white);
+    padding: 10px 0px;
+    width: 120px;
+    display: grid;
+    place-items: center;
+    border-radius: 30px;
+}
+
+.orderPending{
+    background-color: var(--color-orange);
+}
+
+.orderPaid{
+    background-color: var(--color-primary);
+}
+
+.orderCompleted{
+    background-color: var(--color-green);
+}
+
+.orderSegmentLarge {
+  width: 150px;
+}
+
+.orderSegmentSmall {
+  width: 50px;
+}
+
+.orderSegmentEnd {
+  font-size: 20px;
+  cursor: pointer;
+  width: 20px;
+  position: relative;
+}
+
+.orderDropdown {
+    position: absolute;
+    background-color: var(--color-white);
+    box-shadow: var(--card-shadow);
+    width: 170px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    right: 20px;
+    top: 0;
+  }
+  
+  .orderDropdownChoice {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #737b8b;
+    cursor: pointer;
+    transition: all 100ms ease-in-out;
+  }
+  
+  .orderDropdownChoice:hover{
+      transform: scale(1.07);
+  }
+
+@media (max-width:1300px){
+
+    .orderSegments{
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 10px;
+    }
+
+    .titleForOrderCard{
+        display: flex;
+    }
+}
+
+@media (max-width:600px){
+
+    .orderSegments{
+        flex-wrap: nowrap;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 10px;
+    }
+
+    .orderSegment{
+        width: 60vw;
+    }
+
+}

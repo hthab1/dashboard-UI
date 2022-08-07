@@ -1,10 +1,10 @@
 import React from "react";
+import "./SubscriberConfirmation.css";
 import Confirmation from "../../common/confirmation/Confirmation";
-import "./TenantConfirmation.css";
 import { useNavigate } from "react-router-dom";
 import ConfirmationSubmit from "../../common/confirmation/ConfirmationSubmit";
 
-function TenantConfirmation({
+function SubscriberConfirmation({
   personalInformation,
   propertyInformation,
   serviceCharge,
@@ -14,25 +14,25 @@ function TenantConfirmation({
   const navigate = useNavigate();
 
   return (
-    <div className="tenantConfirmation">
+    <div className="homeOwnerConfirmation">
       <Confirmation
         label="Personal Information"
         details={personalInformation}
-        onEdit={() => navigate("/users/tenants/addTenant")}
+        onEdit={() => navigate("/users/subscribers/addSubscriber")}
       />
       <Confirmation
         label="Property Information"
         details={propertyInformation}
-        onEdit={() => navigate("/users/tenants/assignProperty")}
+        onEdit={() => navigate("/users/subscribers/assignSubscriberProperty")}
       />
       <Confirmation
         label="Service Charge"
         details={serviceCharge}
-        onEdit={() => navigate("/users/tenants/setServiceCharge")}
+        onEdit={() => navigate("/users/subscribers/setSubscriberPropertyPrice")}
       />
       <ConfirmationSubmit
         backLabel="Back"
-        continueLabel="Add Tenant"
+        continueLabel="Add Subscriber"
         onBack={onBack}
         onSubmit={onSubmit}
       />
@@ -40,4 +40,4 @@ function TenantConfirmation({
   );
 }
 
-export default TenantConfirmation;
+export default SubscriberConfirmation;
