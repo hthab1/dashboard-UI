@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./SetServiceCharge.css";
 import Header from "../../../../../components/loggedinStack/Header";
 import Steps from "../../../../../components/loggedinStack/users/common/steps/Steps";
@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 import TenantServicePlanForm from "../../../../../components/loggedinStack/users/common/tenantServicePlanForm/TenantServicePlanForm";
 import { useSelector, useDispatch } from "react-redux";
 import { setServicePlan } from "../../../../../reducers/tenantReducer";
+import { setActiveTab } from "../../../../../reducers/sidebarReducer";
 
 function SetServiceCharge() {
   const navigate = useNavigate();
@@ -16,6 +17,10 @@ function SetServiceCharge() {
   const [rentalFee, setRentalFee] = useState("");
   const [serviceCharge, setServiceCharge] = useState("");
   const [startDate, setStartDate] = useState(servicePlan.startDate);
+
+  useEffect(()=>{
+    dispatch(setActiveTab("tenants"))
+  },[])
 
   const handleContinue = (e) => {
     dispatch(

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./AddHomeOwnerConfirmation.css"
 import Header from "../../../../../components/loggedinStack/Header";
 import Steps from "../../../../../components/loggedinStack/users/common/steps/Steps";
@@ -6,12 +6,18 @@ import HomeOwnerConfirmation from "../../../../../components/loggedinStack/users
 import { useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { MoneyFormat } from "../../../../../components/functions/Format";
+import { setActiveTab } from "../../../../../reducers/sidebarReducer";
 
 function AddHomeOwnerConfirmation() {
     const navigate = useNavigate();
+    const dispatch = useDispatch()
     const personalInfo = useSelector((state) => state.homeOwner.homeOwnerPersonalInfo);
     const propertyInfo = useSelector((state) => state.homeOwner.homeOwnerPropertyInfo);
     const servicePlan = useSelector((state) => state.homeOwner.homeOwnerServicePlan);
+
+    useEffect(()=>{
+      dispatch(setActiveTab("home owners"))
+    },[])
   
     const getDate = (date) => {
       let timeStamp = new Date(date)

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Header from "../../../../../components/loggedinStack/Header";
 import Steps from "../../../../../components/loggedinStack/users/common/steps/Steps";
 import "./AddTenantConfirmation.css";
@@ -6,12 +6,18 @@ import { useNavigate } from "react-router-dom";
 import TenantConfirmation from "../../../../../components/loggedinStack/users/tenants/tenantConfirmation/TenantConfirmation";
 import { useSelector, useDispatch } from "react-redux";
 import { MoneyFormat } from "../../../../../components/functions/Format";
+import { setActiveTab } from "../../../../../reducers/sidebarReducer";
 
 function AddTenantConfirmation() {
   const navigate = useNavigate();
+  const dispatch = useDispatch()
   const personalInfo = useSelector((state) => state.tenant.personalInfo);
   const propertyInfo = useSelector((state) => state.tenant.propertyInfo);
   const servicePlan = useSelector((state) => state.tenant.servicePlan);
+
+  useEffect(()=>{
+    dispatch(setActiveTab("tenants"))
+  },[])
 
   const getDate = (date) => {
     let timeStamp = new Date(date)

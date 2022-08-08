@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Header from "../../../../../components/loggedinStack/Header";
 import AddForm from "../../../../../components/loggedinStack/users/common/addForm/AddForm";
 import Steps from "../../../../../components/loggedinStack/users/common/steps/Steps";
@@ -6,6 +6,7 @@ import "./AddTenants.css";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { setPersonalInfo } from "../../../../../reducers/tenantReducer";
+import { setActiveTab } from "../../../../../reducers/sidebarReducer";
 
 function AddTenants() {
   const navigate = useNavigate();
@@ -18,6 +19,10 @@ function AddTenants() {
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
+
+  useEffect(()=>{
+    dispatch(setActiveTab("tenants"))
+  },[])
 
   const handleAdd = (e) => {
     dispatch(

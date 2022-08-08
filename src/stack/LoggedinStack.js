@@ -31,6 +31,7 @@ import AddSubscriber from "../screens/loggedinStack/users/subscribers/addSubscri
 import SubscriberProperty from "../screens/loggedinStack/users/subscribers/assignSubscriberProperty/SubscriberProperty";
 import SubscriberPropertyPrice from "../screens/loggedinStack/users/subscribers/SubscriberPropertyPrice/SubscriberPropertyPrice";
 import AddSubscriberConfirmation from "../screens/loggedinStack/users/subscribers/addSubscriberConfirmation/AddSubscriberConfirmation";
+import MakePayment from "../screens/loggedinStack/serviceCharge/makePayment/MakePayment";
 
 function LoggedinStack() {
   const on = useSelector((state) => state.sidebar.mobileSidebar);
@@ -86,6 +87,7 @@ function LoggedinStack() {
 
             {/* serviceCharge routes */}
             <Route path="/serviceCharge" element={<ServiceCharge />} />
+            <Route path="/serviceCharge/makePayment/:serviceChargeId" element={<MakePayment />} />
 
             {/* maintenance Routes */}
             <Route path="/requests" element={<Requests />} />

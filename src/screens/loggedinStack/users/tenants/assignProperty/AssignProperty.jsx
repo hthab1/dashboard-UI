@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Header from "../../../../../components/loggedinStack/Header";
 import Steps from "../../../../../components/loggedinStack/users/common/steps/Steps";
 import "./AssignProperty.css";
@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 import EstateForm from "../../../../../components/loggedinStack/users/common/estateForm/EstateForm";
 import { useDispatch, useSelector } from "react-redux";
 import { setPropertyInfo } from "../../../../../reducers/tenantReducer";
+import { setActiveTab } from "../../../../../reducers/sidebarReducer";
 
 function AssignProperty() {
   const navigate = useNavigate();
@@ -16,6 +17,10 @@ function AssignProperty() {
   const [estate, setEstate] = useState("");
   const [property, setProperty] = useState("");
   const [apartment, setApartment] = useState("");
+
+  useEffect(()=>{
+    dispatch(setActiveTab("tenants"))
+  },[])
 
   const handleContinue = (e) => {
     dispatch(

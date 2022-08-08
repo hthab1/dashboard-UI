@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./Tenants.css";
 import Header from "../../../../components/loggedinStack/Header.jsx";
 import Search from "../../../../components/loggedinStack/common/search/Search";
@@ -6,12 +6,19 @@ import Pagination from "../../../../components/loggedinStack/common/pagination/P
 import Tenant from "../../../../components/loggedinStack/users/tenants/Tenant";
 import { tenants } from "../../../../data/tenants";
 import { useNavigate } from "react-router-dom";
+import {useDispatch} from "react-redux"
+import { setActiveTab } from "../../../../reducers/sidebarReducer";
 
 function Tenants() {
   const navigate = useNavigate();
+  const dispatch = useDispatch()
   const [items, setItems] = useState([]);
   const listRef = useRef();
   const data = tenants;
+
+  useEffect(()=>{
+    dispatch(setActiveTab("tenants"))
+  },[])
 
   return (
     <div className="tenants loadedPage">

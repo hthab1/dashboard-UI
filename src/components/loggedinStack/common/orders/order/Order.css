@@ -33,42 +33,42 @@
   flex-direction: column;
 }
 
-.orderSegmentStatus{
-    display: flex;
-    justify-content: center;
+.orderSegmentStatus {
+  display: flex;
+  justify-content: center;
 }
 
-.titleForOrderCard{
-    display: none;
-    font-family: "Poppins";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 24px;
-    color: #737b8b;
-    margin-bottom: 5px;
+.titleForOrderCard {
+  display: none;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: #737b8b;
+  margin-bottom: 5px;
 }
 
-.orderStatus{
-    background-color: var(--color-imageBackground);
-    color: var(--color-white);
-    padding: 10px 0px;
-    width: 120px;
-    display: grid;
-    place-items: center;
-    border-radius: 30px;
+.orderStatus {
+  background-color: var(--color-imageBackground);
+  color: var(--color-white);
+  padding: 10px 0px;
+  width: 120px;
+  display: grid;
+  place-items: center;
+  border-radius: 30px;
 }
 
-.orderPending{
-    background-color: var(--color-orange);
+.orderPending {
+  background-color: var(--color-orange);
 }
 
-.orderPaid{
-    background-color: var(--color-primary);
+.orderPaid {
+  background-color: var(--color-primary);
 }
 
-.orderCompleted{
-    background-color: var(--color-green);
+.orderCompleted {
+  background-color: var(--color-green);
 }
 
 .orderSegmentLarge {
@@ -87,57 +87,183 @@
 }
 
 .orderDropdown {
-    position: absolute;
-    background-color: var(--color-white);
-    box-shadow: var(--card-shadow);
-    width: 170px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    padding: 10px;
-    right: 20px;
-    top: 0;
-  }
-  
-  .orderDropdownChoice {
-    font-family: "Poppins";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
-    color: #737b8b;
-    cursor: pointer;
-    transition: all 100ms ease-in-out;
-  }
-  
-  .orderDropdownChoice:hover{
-      transform: scale(1.07);
-  }
-
-@media (max-width:1300px){
-
-    .orderSegments{
-        flex-wrap: wrap;
-        justify-content: flex-start;
-        gap: 10px;
-    }
-
-    .titleForOrderCard{
-        display: flex;
-    }
+  position: absolute;
+  background-color: var(--color-white);
+  box-shadow: var(--card-shadow);
+  width: 170px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+  right: 20px;
+  top: 0;
 }
 
-@media (max-width:600px){
+.orderDropdownChoice {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #737b8b;
+  cursor: pointer;
+  transition: all 100ms ease-in-out;
+}
 
-    .orderSegments{
-        flex-wrap: nowrap;
-        flex-direction: column;
-        justify-content: flex-start;
-        gap: 10px;
-    }
+.orderDropdownChoice:hover {
+  transform: scale(1.07);
+}
 
-    .orderSegment{
-        width: 60vw;
-    }
+.viewServiceChargeModal {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
 
+.modalCloseContainer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.modalClose {
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.modalLogo {
+  height: 80px;
+}
+
+.modalServiceChargeContent {
+  display: flex;
+  flex-direction: column;
+  padding-block: 20px;
+}
+
+.modalServiceChargeSegment {
+  border-bottom: 1px solid var(--color-inputBorder);
+  display: flex;
+  flex-direction: row;
+  padding-block: 10px 5px;
+}
+
+.modalServiceChargeContentTitle {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21px;
+  color: #171b1e;
+  width: 150px !important;
+}
+
+.modalServiceChargeContentText {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #171b1e;
+  display: inline-block;
+  word-wrap: break-word;
+  max-width: 80%;
+}
+
+.modalButtonPrintContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+.modalButtonPrint {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  padding: 10px 30px;
+  border-radius: 30px;
+  color: #ffffff;
+  background-color: var(--color-primary);
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.modalMarkQuestion {
+  display: flex;
+  text-align: center;
+  margin: 20px 30px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #171b1e;
+}
+
+.modalMarkButtons{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.modalMarkButton{
+  font-family: 'Roboto';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+color: #464A53;
+padding: 15px 30px;
+border: 1px solid #464A53;
+border-radius: 40px;
+cursor: pointer;
+}
+
+.markModalButtonContinue{
+  border: none;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+@media (max-width: 1300px) {
+  .orderSegments {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 10px;
+  }
+
+  .titleForOrderCard {
+    display: flex;
+  }
+}
+
+@media (max-width: 600px) {
+  .orderSegments {
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 10px;
+  }
+
+  .modalServiceChargeContentTitle {
+    font-size: 14px;
+    width: 110px !important;
+  }
+
+  .modalServiceChargeContentText {
+    font-size: 14px;
+    max-width: 60%;
+  }
+
+  .orderSegment {
+    width: 60vw;
+  }
+
+  .modalMarkButton{
+    font-size: 14px;
+    padding: 10px 20px;
+  }
 }

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./AddSubscriber.css";
 import Header from "../../../../../components/loggedinStack/Header";
 import AddForm from "../../../../../components/loggedinStack/users/common/addForm/AddForm";
@@ -6,6 +6,7 @@ import Steps from "../../../../../components/loggedinStack/users/common/steps/St
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { setSubscriberPersonalInfo } from "../../../../../reducers/subscriberReducer";
+import { setActiveTab } from "../../../../../reducers/sidebarReducer";
 
 function AddSubscriber() {
   const navigate = useNavigate();
@@ -18,6 +19,10 @@ function AddSubscriber() {
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
+
+  useEffect(()=>{
+    dispatch(setActiveTab("subscribers"))
+  },[])
 
   const handleAdd = (e) => {
     dispatch(

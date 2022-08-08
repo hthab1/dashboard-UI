@@ -9,15 +9,22 @@ import { useNavigate } from "react-router-dom";
 import { homeOwners } from "../../../../data/homeOwners";
 import Pagination from "../../../../components/loggedinStack/common/pagination/Pagination";
 import HomeOwner from "../../../../components/loggedinStack/users/homeOwners/homeOwner/HomeOwner";
+import { useDispatch } from "react-redux"
+import { setActiveTab } from "../../../../reducers/sidebarReducer";
 
 function HomeOwners() {
+  const navigate = useNavigate();
+  const dispatch = useDispatch()
   const [dropdown, setDropdown] = useState(false);
   const [selected, setSelected] = useState("Newest");
   const options = ["Relevant", "Newest", "Time"];
-  const navigate = useNavigate();
   const [owners, setOwners] = useState([]);
   const listRef = useRef();
   const data = homeOwners;
+
+  useEffect(()=>{
+    dispatch(setActiveTab("home owners"))
+  },[])
 
   return (
     <div className="homeOwners loadedPage">

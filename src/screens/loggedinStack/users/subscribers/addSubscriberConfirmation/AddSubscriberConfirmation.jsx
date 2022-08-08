@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./AddSubscriberConfirmation.css";
 import Header from "../../../../../components/loggedinStack/Header";
 import Steps from "../../../../../components/loggedinStack/users/common/steps/Steps";
@@ -6,12 +6,18 @@ import { useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { MoneyFormat } from "../../../../../components/functions/Format";
 import SubscriberConfirmation from "../../../../../components/loggedinStack/users/subscribers/subscriberConfirmation/SubscriberConfirmation";
+import { setActiveTab } from "../../../../../reducers/sidebarReducer";
 
 function AddSubscriberConfirmation() {
   const navigate = useNavigate();
+  const dispatch = useDispatch()
   const personalInfo = useSelector((state) => state.subscriber.personalInfo);
   const propertyInfo = useSelector((state) => state.subscriber.propertyInfo);
   const servicePlan = useSelector((state) => state.subscriber.servicePlan);
+
+  useEffect(()=>{
+    dispatch(setActiveTab("subscribers"))
+  },[])
 
   const getDate = (date) => {
     let timeStamp = new Date(date);

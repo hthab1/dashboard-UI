@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./SubscriberPropertyPrice.css"
 import Header from "../../../../../components/loggedinStack/Header";
 import Steps from "../../../../../components/loggedinStack/users/common/steps/Steps";
@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import SubscriberPrice from "../../../../../components/loggedinStack/users/subscribers/subscriberPrice/SubscriberPrice";
 import { setSubscriberServicePlan } from "../../../../../reducers/subscriberReducer";
+import { setActiveTab } from "../../../../../reducers/sidebarReducer";
 
 function SubscriberPropertyPrice() {
     const navigate = useNavigate();
@@ -16,6 +17,10 @@ function SubscriberPropertyPrice() {
     const [amount, setAmount] = useState("");
     const [startDate, setStartDate] = useState(servicePlan.startDate);
     const [dueDate, setDueDate] = useState(servicePlan.dueDate);
+
+    useEffect(()=>{
+      dispatch(setActiveTab("subscribers"))
+    },[])
   
     const handleContinue = (e) => {
       dispatch(

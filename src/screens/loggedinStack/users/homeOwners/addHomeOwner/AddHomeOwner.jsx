@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Header from "../../../../../components/loggedinStack/Header";
 import AddForm from "../../../../../components/loggedinStack/users/common/addForm/AddForm";
 import Steps from "../../../../../components/loggedinStack/users/common/steps/Steps";
@@ -6,6 +6,7 @@ import "./AddHomeOwner.css";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { setHomeOwnerPersonalInfo } from "../../../../../reducers/homeOwnerReducer";
+import { setActiveTab } from "../../../../../reducers/sidebarReducer";
 
 function AddHomeOwner() {
   const navigate = useNavigate();
@@ -25,6 +26,10 @@ function AddHomeOwner() {
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
 
+  useEffect(()=>{
+    dispatch(setActiveTab("home owners"))
+  },[])
+  
   const handleAdd = (e) => {
     dispatch(
       setHomeOwnerPersonalInfo({

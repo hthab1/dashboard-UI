@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Header from "../../../../components/loggedinStack/Header";
 import { subscribers } from "../../../../data/subscribers";
 import "./Subscribers.css";
@@ -7,14 +7,21 @@ import Pagination from "../../../../components/loggedinStack/common/pagination/P
 import InfoCard from "../../../../components/loggedinStack/common/infoCard/InfoCard";
 import OrdersHeader from "../../../../components/loggedinStack/common/orders/ordersHeader/OrdersHeader";
 import Order from "../../../../components/loggedinStack/common/orders/order/Order";
+import { useDispatch } from "react-redux"
+import { setActiveTab } from "../../../../reducers/sidebarReducer";
 
 function Subscribers() {
   const navigate = useNavigate();
+  const dispatch = useDispatch()
   const [selectAll, setSelectAll] = useState(false);
   const [select, setSelect] = useState(false);
   const [items, setItems] = useState([]);
   const listRef = useRef();
   const data = subscribers;
+
+  useEffect(()=>{
+    dispatch(setActiveTab("subscribers"))
+  },[])
 
   return (
     <div className="subscribers loadedPage">
