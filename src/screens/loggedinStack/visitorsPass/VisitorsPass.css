@@ -1,0 +1,21 @@
+
+
+.visitorsPassHeader{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.visitorsPassHeaderButton{
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 24px;
+padding: 10px 30px;
+border-radius: 10px;
+background-color: var(--color-primary);
+cursor: pointer;
+color: var(--color-white);
+}

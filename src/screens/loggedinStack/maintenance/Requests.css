@@ -57,6 +57,21 @@
   color: var(--color-white);
 }
 
+.requestsRequests {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  overflow-y: scroll;
+  justify-content: flex-start;
+  align-items: center;
+  margin-block: 20px;
+}
+
+.requestsRequests::-webkit-scrollbar {
+  display: none;
+}
+
+
 @media (max-width:830px){
   .requestsFilterButtons{
     margin-block: 10px;

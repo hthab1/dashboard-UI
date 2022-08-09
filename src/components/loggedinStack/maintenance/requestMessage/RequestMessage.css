@@ -1,0 +1,58 @@
+.requestMessage {
+  display: flex;
+  flex: 1;
+  margin-block: 10px;
+}
+
+.requestMessageLeft {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-inline: 20px;
+}
+
+.requestMessageDay {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  color: #717171;
+}
+
+.requestMessageDate {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 27px;
+  color: #090e23;
+}
+
+.requestMessageRight {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 20px;
+  background-color: var(--color-white);
+  border-left: 3px solid #ff9797;
+}
+
+.requestMessageMessage {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  color: #090e23;
+}
+
+.requestMessageTime {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  color: #717171;
+  margin-top: 10px;
+}

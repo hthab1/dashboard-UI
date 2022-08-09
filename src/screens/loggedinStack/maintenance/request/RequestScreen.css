@@ -1,0 +1,344 @@
+.requestScreenHeader {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.requestScreenHeaderLeft {
+  display: flex;
+  gap: 20px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  color: #171b1e;
+}
+
+.requestScreenBack {
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+
+.requestScreenHeaderRight {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+
+.requestScreenHeaderButton {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--color-primary);
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  border: 1px solid var(--color-primary);
+}
+
+.requestScreenHeaderMore {
+  display: grid;
+  place-items: center;
+  font-size: 20px;
+  cursor: pointer;
+  position: relative;
+}
+
+.requestScreenContent {
+  width: 100%;
+  flex: 1;
+  overflow-y: scroll;
+}
+
+.requestScreenContent::-webkit-scrollbar {
+  display: none;
+}
+
+.requestScreenTextAreaContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background: rgba(217, 217, 217, 0.46);
+  height: fit-content;
+  border-radius: 20px;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.requestScreenSendButton {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: var(--color-white);
+  padding: 10px 30px;
+  margin: 20px;
+  background-color: var(--color-primary);
+  border-radius: 40px;
+  cursor: pointer;
+}
+
+.requestScreenTextArea {
+  flex: 1;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  color: #090e23;
+}
+
+.requestScreenSentSuccessfully {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #71d875;
+  text-align: center;
+  margin-block: 20px;
+}
+
+.rightScreenHeaderDropdown {
+  position: absolute;
+  background-color: var(--color-white);
+  box-shadow: var(--card-shadow);
+  width: 170px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+  right: 20px;
+  top: 0;
+}
+
+.rightScreenHeaderDropdownChoice {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #737b8b;
+  cursor: pointer;
+  transition: all 100ms ease-in-out;
+}
+
+.rightScreenHeaderDropdownChoice:hover {
+  transform: scale(1.07);
+}
+
+.modalCloseContainer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.modalClose {
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.modalLogo {
+  height: 80px;
+}
+
+.modalServiceChargeContent {
+  display: flex;
+  flex-direction: column;
+  padding-block: 20px;
+}
+
+.modalServiceChargeSegment {
+  border-bottom: 1px solid var(--color-inputBorder);
+  display: flex;
+  flex-direction: row;
+  padding-block: 10px 5px;
+}
+
+.modalServiceChargeContentTitle {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21px;
+  color: #171b1e;
+  width: 150px !important;
+}
+
+.modalServiceChargeContentText {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #171b1e;
+  display: inline-block;
+  word-wrap: break-word;
+  max-width: 80%;
+}
+
+.modalButtonPrintContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+.modalButtonPrint {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  padding: 10px 30px;
+  border-radius: 30px;
+  color: #ffffff;
+  background-color: var(--color-primary);
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.modalAssignQuestion {
+  display: flex;
+  text-align: left;
+  margin: 20px 30px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #171b1e;
+}
+
+.modalRepairMaterialsHeader {
+  display: flex;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 27px;
+  margin-bottom: 10px;
+}
+
+.modalAssignButtons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.modalAssignButtonMarginBottom {
+  margin-bottom: 220px;
+}
+
+.modalAssignButton {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  color: #464a53;
+  padding: 15px 30px;
+  border: 1px solid #464a53;
+  border-radius: 40px;
+  cursor: pointer;
+}
+
+.AssignModalButtonContinue {
+  border: none;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.modalRequestListItems{
+    display: flex;
+    flex-direction: column;
+    margin: 20px 30px;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #171b1e;
+}
+
+.modalRequestItem{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    margin-block: 10px;
+}
+
+.modalRequestItemInput{
+    background: #F0EFEF;
+    border-radius: 10px;
+    padding: 10px;
+    width: 50px;
+    display: flex;
+    text-align: left;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    color: #171b1e;
+}
+
+.modalRequestItemInput::-webkit-outer-spin-button,
+.modalRequestItemInput::-webkit-inner-spin-button{
+    -webkit-appearance: push-button;
+}
+
+@media (max-width: 800px) {
+  .requestScreenHeader {
+    justify-content: flex-start;
+  }
+
+  .requestScreenHeaderLeft {
+    font-size: 14px;
+    margin-right: 10px;
+  }
+
+  .requestScreenHeaderRight {
+    gap: 10px;
+  }
+
+  .requestScreenHeaderButton {
+    font-size: 14px;
+    padding: 5px 10px;
+  }
+
+  .requestScreenTextAreaContainer {
+    flex-direction: column;
+  }
+
+  .requestScreenSentSuccessfully {
+    font-size: 14px;
+  }
+
+  .modalServiceChargeContentTitle {
+    font-size: 14px;
+    width: 110px !important;
+  }
+
+  .modalServiceChargeContentText {
+    font-size: 14px;
+    max-width: 60%;
+  }
+
+  .modalAssignButton {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+}

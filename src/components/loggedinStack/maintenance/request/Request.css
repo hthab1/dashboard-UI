@@ -1,0 +1,192 @@
+.request {
+  display: flex;
+  flex-direction: row;
+  width: 99%;
+  max-width: 99%;
+  background: var(--color-white);
+  box-shadow: var(--card-shadow);
+  border-radius: 10px;
+  cursor: pointer;
+  margin-left: 2px;
+  margin-block: 10px;
+  transition: all 100ms ease-in-out;
+}
+
+.request:hover {
+  transform: scale(0.98);
+}
+
+.requestContainer {
+  margin: 20px;
+  display: flex;
+}
+
+.requestImage {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-right: 20px;
+}
+
+.requestContentContainer {
+  display: flex;
+  flex: 1;
+}
+
+.requestNameContainer {
+  display: flex;
+  flex-direction: column;
+  width: 230px;
+}
+
+.requestId {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #219653;
+  margin-bottom: 10px;
+}
+
+.requestName {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 23px;
+  color: #171b1e;
+  display: inline-block;
+  word-wrap: break-word;
+  margin-bottom: 10px;
+}
+
+.requestTimestamp {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  color: #717579;
+  margin-bottom: 20px;
+}
+
+.requestRequestContainer {
+    flex: 1;
+  padding-left: 10px;
+}
+
+.requestTitle {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  color: #171b1e;
+  margin-bottom: 10px;
+}
+
+.requestRequest {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #171b1e;
+  width: 40vw;
+  display: inline-block;
+  word-wrap: break-word;
+}
+
+@media (max-width:1200px){
+    .requestRequest{
+        width: 30vw;
+    }
+}
+
+@media (max-width:1000px) and (min-width:900px) {
+
+    .requestNameContainer{
+        width: 45vw;
+    }
+
+    .requestContentContainer{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .requestRequestContainer{
+        padding-left: 0;
+    }
+    .requestRequest{
+        width: 45vw;
+    }
+}
+
+@media (max-width:670px){
+    .requestNameContainer{
+        width: 55vw;
+    }
+
+    .requestContentContainer{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .requestRequestContainer{
+        padding-left: 0;
+    }
+
+    .requestRequest{
+        width: 50vw;
+    }
+
+    .requestName{
+        font-size: 16px;
+    }
+
+    .requestTitle{
+        font-size: 16px;
+    }
+
+    .requestRequest{
+        font-size: 14px;
+    }
+}
+
+@media (max-width:300px){
+
+    .requestImage{
+        width: 50px;
+        height: 50px;
+    }
+
+    .requestNameContainer{
+        width: 40vw;
+    }
+
+    .requestContentContainer{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .requestRequestContainer{
+        padding-left: 0;
+    }
+
+    .requestRequest{
+        width: 40vw;
+    }
+
+    .requestName{
+        font-size: 16px;
+    }
+
+    .requestTitle{
+        font-size: 16px;
+    }
+
+    .requestRequest{
+        font-size: 14px;
+    }
+}

@@ -62,6 +62,20 @@ select:focus {
   outline: none;
 }
 
+
+textarea {
+  border: none;
+  background-color: transparent;
+}
+
+textarea:focus {
+  outline: none;
+}
+
+textarea::-webkit-scrollbar{
+  display: none;
+}
+
 .loadedPage {
   display: flex;
   flex-direction: column;
@@ -116,6 +130,34 @@ select:focus {
   place-items: center;
   font-size: 18px;
   color: var(--color-green);
+}
+
+.moreDropdown {
+  position: absolute;
+  background-color: var(--color-white);
+  box-shadow: var(--card-shadow);
+  width: 170px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+  right: 20px;
+  top: 0;
+}
+
+.moreDropdownChoice {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #737b8b;
+  cursor: pointer;
+  transition: all 100ms ease-in-out;
+}
+
+.moreDropdownChoice:hover {
+  transform: scale(1.07);
 }
 
 @media (max-width: 540px) {
