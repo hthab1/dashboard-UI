@@ -1,0 +1,322 @@
+.visitorPass {
+    display: flex;
+    flex: 1;
+    padding: 15px 20px;
+    background-color: var(--color-white);
+    border: 1px solid #eeeeee;
+    align-items: flex-start;
+  }
+  
+  .visitorPass:hover {
+    background-color: transparent;
+  }
+  
+  .visitorPassSegments {
+    display: flex;
+    flex: 1;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-top: 2px;
+  }
+  
+  .visitorPassSegment {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 19px;
+    color: #171b1e;
+    width: 100px;
+    word-wrap: break-word;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .visitorPassSegmentStatus {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .titleForvisitorPassCard {
+    display: none;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: #737b8b;
+    margin-bottom: 5px;
+  }
+  
+  .visitorPassStatus {
+    background-color: var(--color-imageBackground);
+    color: var(--color-white);
+    padding: 10px 0px;
+    width: 120px;
+    display: grid;
+    place-items: center;
+    border-radius: 30px;
+  }
+  
+  .visitorPassPending {
+    background-color: var(--color-orange);
+  }
+  
+  .visitorPassPaid {
+    background-color: var(--color-primary);
+  }
+  
+  .visitorPassCompleted {
+    background-color: var(--color-green);
+  }
+  
+  .visitorPassSegmentLarge {
+    width: 150px;
+  }
+  
+  .visitorPassSegmentSmall {
+    width: 50px;
+  }
+  
+  .visitorPassSegmentEnd {
+    font-size: 20px;
+    cursor: pointer;
+    width: 20px;
+    position: relative;
+  }
+  
+  .visitorPassDropdown {
+    position: absolute;
+    background-color: var(--color-white);
+    box-shadow: var(--card-shadow);
+    width: 170px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    right: 20px;
+    top: 0;
+  }
+  
+  .visitorPassDropdownChoice {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #737b8b;
+    cursor: pointer;
+    transition: all 100ms ease-in-out;
+  }
+  
+  .visitorPassDropdownChoice:hover {
+    transform: scale(1.07);
+  }
+  
+  .viewServiceChargeModal {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .modalCloseContainer {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .modalClose {
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .modalLogo {
+    height: 80px;
+  }
+  
+  .modalServiceChargeContent {
+    display: flex;
+    flex-direction: column;
+    padding-block: 20px;
+  }
+  
+  .modalServiceChargeSegment {
+    border-bottom: 1px solid var(--color-inputBorder);
+    display: flex;
+    flex-direction: row;
+    padding-block: 10px 5px;
+  }
+  
+  .modalServiceChargeContentTitle {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
+    color: #171b1e;
+    width: 150px !important;
+  }
+  
+  .modalServiceChargeContentText {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #171b1e;
+    display: inline-block;
+    word-wrap: break-word;
+    max-width: 80%;
+  }
+  
+  .modalButtonPrintContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-top: 10px;
+  }
+  
+  .modalButtonPrint {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    padding: 10px 30px;
+    border-radius: 30px;
+    color: #ffffff;
+    background-color: var(--color-primary);
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  
+  .modalMarkQuestion {
+    display: flex;
+    text-align: center;
+    margin: 20px 30px;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #171b1e;
+  }
+  
+  .modalMarkButtons{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .modalMarkButton{
+    font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  color: #464A53;
+  padding: 15px 30px;
+  border: 1px solid #464A53;
+  border-radius: 40px;
+  cursor: pointer;
+  }
+  
+  .markModalButtonContinue{
+    border: none;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+  }
+
+/* modal for qr code */
+
+.modalDetails{
+  display: flex;
+  flex-direction: column;
+  min-width: 220px;
+}
+
+.modalDetailCloseContainer{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.modalDetailsClose{
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.modalDetailsName{
+  font-family: 'Poppins';
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 26px;
+margin-block: 10px 20px;
+}
+
+.modalDetailsSegementTitle{
+  font-family: 'Poppins';
+font-style: normal;
+font-weight: 700;
+font-size: 12px;
+line-height: 18px;
+margin-top: 10px;
+}
+
+.modalDetailsSegementInfo{
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  color: #090E23;
+}
+
+/* modal for qr code */
+
+
+
+
+  
+  @media (max-width: 1300px) {
+    .visitorPassSegments {
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      gap: 10px;
+    }
+  
+    .titleForvisitorPassCard {
+      display: flex;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .visitorPassSegments {
+      flex-wrap: nowrap;
+      flex-direction: column;
+      justify-content: flex-start;
+      gap: 10px;
+    }
+  
+    .modalServiceChargeContentTitle {
+      font-size: 14px;
+      width: 110px !important;
+    }
+  
+    .modalServiceChargeContentText {
+      font-size: 14px;
+      max-width: 60%;
+    }
+  
+    .visitorPassSegment {
+      width: 60vw;
+    }
+  
+    .modalMarkButton{
+      font-size: 14px;
+      padding: 10px 20px;
+    }
+  }
+  

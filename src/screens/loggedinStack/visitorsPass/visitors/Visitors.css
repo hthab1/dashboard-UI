@@ -1,0 +1,72 @@
+.visitorsContent {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    overflow-y: scroll;
+    justify-content: flex-start;
+    align-items: center;
+    margin-block: 20px;
+  }
+  
+  .visitorsContent::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .visitorsContentHeader{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 99%;
+      margin-top: 5px;
+  }
+  
+  .visitorsInfoCards{
+    display: flex;
+    flex: 1;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.visitorsVisitors{
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    width: 100%;
+}
+
+.visitorsListHeader{
+    display: flex;
+    flex: 1;
+    height: fit-content;
+}
+
+
+@media (max-width:1300px){
+    .visitorsListHeader{
+        display: none;
+    }
+}
+
+@media (max-width:1070px){
+    .visitorsContentHeader{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .visitorsInfoCards{
+        margin-top: 10px;
+        justify-content: flex-start;
+    }
+}
+
+@media (max-width:600px){
+    .visitorsContentHeader{
+        align-items: center;
+    }
+    
+    .visitorsInfoCards{
+        align-items: center;
+        justify-content: center;
+    }
+}

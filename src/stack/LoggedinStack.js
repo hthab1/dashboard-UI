@@ -33,6 +33,8 @@ import SubscriberPropertyPrice from "../screens/loggedinStack/users/subscribers/
 import AddSubscriberConfirmation from "../screens/loggedinStack/users/subscribers/addSubscriberConfirmation/AddSubscriberConfirmation";
 import MakePayment from "../screens/loggedinStack/serviceCharge/makePayment/MakePayment";
 import RequestScreen from "../screens/loggedinStack/maintenance/request/RequestScreen";
+import AllVisitors from "../screens/loggedinStack/visitorsPass/visitors/AllVisitors";
+import VisitorList from "../screens/loggedinStack/visitorsPass/visitors/VisitorList";
 
 function LoggedinStack() {
   const on = useSelector((state) => state.sidebar.mobileSidebar);
@@ -96,6 +98,8 @@ function LoggedinStack() {
 
             {/* visitorsPass Routes */}
             <Route path="/visitorsPass" element={<VisitorsPass />} />
+            <Route path="/visitorsPass/allVisitors" element={<AllVisitors />} />
+            <Route path="/visitorsPass/visitorList/:visitorListId" element={<VisitorList />} />
 
             {/* inventory Routes */}
             <Route path="/inventory" element={<Inventory />} />

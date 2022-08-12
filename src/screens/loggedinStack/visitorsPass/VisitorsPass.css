@@ -1,21 +1,50 @@
-
-
-.visitorsPassHeader{
-    display: flex;
-    width: 100%;
-    flex-direction: row;
-    justify-content: flex-end;
+.vistorsPassList {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  overflow-y: scroll;
+  justify-content: flex-start;
+  align-items: center;
+  margin-block: 20px;
 }
 
-.visitorsPassHeaderButton{
-    font-family: 'Poppins';
-font-style: normal;
-font-weight: 500;
-font-size: 16px;
-line-height: 24px;
-padding: 10px 30px;
-border-radius: 10px;
-background-color: var(--color-primary);
-cursor: pointer;
-color: var(--color-white);
+.visitorsPassHeaderContent {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  flex: 1;
+  width: 99%;
+}
+
+.visitorsPassHeaderButton {
+  cursor: pointer;
+  padding: 10px 20px;
+  border-radius: 10px;
+  background-color: var(--color-primary);
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: #ffffff;
+  width: fit-content;
+  height: fit-content;
+}
+
+.visitorsPassContent {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.vistorsPassList::-webkit-scrollbar {
+  display: none;
+}
+
+@media (max-width: 1300px) {
+  .visitorsPassContentHeader {
+    display: none;
+  }
 }
