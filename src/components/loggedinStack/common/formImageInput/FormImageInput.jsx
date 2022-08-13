@@ -1,16 +1,34 @@
-import React from "react";
+import React, { useState } from "react";
 import "./FormImageInput.css";
 
-function FormImageInput({ error, image, setImage }) {
+function FormImageInput({ error, value, onChange }) {
+  const [profile, setProfile] = useState(value);
+
+  const OnSelectFile = (e) => {
+    const selectedFile = e.target.files[0];
+    const selectedImage = URL.createObjectURL(selectedFile);
+    setProfile(selectedImage);
+    onChange(selectedImage);
+  };
+
   return (
     <div className="formImageInput">
-      <div className="formImageContainer">
-        {image ? (
-          <img src={image} alt="" className="formImageImage" />
+      <label htmlFor="imageInput" className="formImageContainer">
+        {profile ? (
+          <img src={profile} alt="" className="formImageImage" />
         ) : (
-          <span className="formImagePlaceHolder">Add Photo</span>
+          <>
+            <span className="formImagePlaceHolder">Add Photo</span>
+          </>
         )}
-      </div>
+      </label>
+      <input
+        type="file"
+        id="imageInput"
+        className="formImageInputImage"
+        accept="image/*"
+        onChange={OnSelectFile}
+      />
       {error && <div className="formImageInputError">{error}</div>}
     </div>
   );

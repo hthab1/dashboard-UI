@@ -50,6 +50,10 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
+input[type="file"]{
+  display: none;
+}
+
 select {
   -webkit-appearance: none !important;
   -moz-appearance: none !important;

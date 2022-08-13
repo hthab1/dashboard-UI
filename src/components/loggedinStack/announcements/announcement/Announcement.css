@@ -1,0 +1,146 @@
+.announcement {
+  display: flex;
+  box-shadow: var(--card-shadow);
+  width: 99%;
+  align-self: center;
+  margin-block: 10px;
+  border-radius: 10px;
+  background-color: var(--color-white);
+}
+
+.announcementContent {
+  display: flex;
+  flex: 1;
+  margin: 20px;
+}
+
+.announcementImage {
+  background-color: var(--color-imageBackground);
+  width: 70px;
+  height: 70px;
+  border-radius: 10px;
+  margin-right: 20px;
+  object-fit: cover;
+}
+
+.announcementContentInfo {
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+}
+
+.announcementContentInfoSegments {
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+}
+
+.announcementContentInfoSegment {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-inline: 10px;
+}
+
+.announcementId {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  color: #00695e;
+}
+
+.announcementTimestamp {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: #737b8b;
+  line-height: 24px;
+}
+
+.announcementSegmentTitle {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  color: #171b1e;
+  margin-bottom: 10px;
+}
+
+.announcementSegmentMainText {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+  line-height: 24px;
+  color: #424141;
+  word-wrap: break-word;
+}
+
+.announcementContentInfoButton {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  color: #00695e;
+  padding: 10px;
+  border: 1px solid #00695e;
+  border-radius: 10px;
+  margin-top: 10px;
+  cursor: pointer;
+  width: fit-content;
+  height: fit-content;
+}
+
+.announcementMore {
+  position: relative;
+}
+
+.announcementMoreIcon {
+  font-size: 20px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.announcementDropdown {
+  position: absolute;
+  background-color: var(--color-white);
+  box-shadow: var(--card-shadow);
+  width: 170px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+  right: 10px;
+}
+
+.announcementDropdownChoice {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #737b8b;
+  cursor: pointer;
+  transition: all 100ms ease-in-out;
+}
+
+.announcementDropdownChoice:hover {
+  transform: scale(1.07);
+}
+
+@media (max-width: 600px) {
+  .announcementImage {
+    margin-right: 10px;
+  }
+
+  .announcementContentInfoSegment {
+    width: 150px;
+  }
+
+  .announcementSegmentMainText {
+    font-size: 14px;
+  }
+}

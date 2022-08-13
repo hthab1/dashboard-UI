@@ -38,12 +38,15 @@ function AddStaffForm({
   onAdd,
   buttonName,
 }) {
+  const [profile, setProfile] = useState(image);
+
   const validationSchema = Yup.object().shape({
     email: Yup.string().required().email().label("Email"),
     firstName: Yup.string().required().label("First Name"),
     lastName: Yup.string().required().label("Last Name"),
     phone: Yup.string().required().min(11).max(11).label("Phone Number"),
-    role: Yup.string().required("Please Select a role"),
+    role: Yup.string().required("Please select a role"),
+    image: Yup.string().required("Please select a profile picture"),
   });
 
   return (
@@ -55,7 +58,7 @@ function AddStaffForm({
           email: email,
           phone: phone,
           role: role,
-          image:image,
+          image: profile,
         }}
         onSubmit={(values, actions) => {
           onAdd();
@@ -100,7 +103,7 @@ function AddStaffForm({
               onChange={handleChange("email")}
               error={touched.email && errors.email}
             />
-            
+
             <FormInput
               label="Phone No*"
               placeholder="Enter phone number"
@@ -113,7 +116,11 @@ function AddStaffForm({
                 setFieldValue("phone", e.target.value);
               }}
             />
-            <FormImageInput image={image} />
+            <FormImageInput
+              value={values.image}
+              onChange={(value) => setFieldValue("image", value)}
+              error={touched.image && errors.image}
+            />
             <FormButton
               label={buttonName ? buttonName : "Add Staff"}
               onClick={() => {
@@ -122,13 +129,15 @@ function AddStaffForm({
                   !errors.phone &&
                   !errors.firstName &&
                   !errors.lastName &&
-                  !errors.role
+                  !errors.role &&
+                  !errors.image
                 ) {
                   setEmail(values.email);
                   setFirstName(values.firstName);
                   setLastName(values.lastName);
                   setPhone(values.phone);
                   setRole(values.role);
+                  setImage(values.image);
                 }
 
                 handleSubmit();

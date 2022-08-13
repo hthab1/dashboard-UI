@@ -1,0 +1,134 @@
+.announcements {
+    height: 100vh;
+  }
+  
+  .announcementsHeader {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .announcementsHeaderLeft {
+
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 26px;
+color: #000000;
+  }
+  
+  .announcementsHeaderRight {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .announcementHeaderButtonLeft {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: #00695e;
+    cursor: pointer;
+    height: 40px;
+    border: 1px solid #00695e;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    padding-inline: 30px;
+  }
+  
+  .announcementHeaderButtonRight {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: #ffffff;
+    cursor: pointer;
+    background:var(--color-primary);
+    height: 40px;
+    border: 1px solid var(--color-primary);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    padding-inline: 30px;
+    margin-left: 20px;
+  }
+  
+  .announcementsContent{
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    overflow-y: scroll;
+    justify-content: center;
+    align-items: flex-start;
+    margin-block: 20px;
+  }
+  
+  .announcementsAnnouncements{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  
+  .announcementsContent::-webkit-scrollbar{
+  display: none;
+  }
+  
+  @media (max-width:980px){
+    .announcementHeaderButtonLeft {
+      font-size: 14px;
+      padding-inline: 20px;
+    }
+    
+    .announcementHeaderButtonRight{
+      font-size: 14px;
+      padding-inline: 20px;
+    }
+  }
+  
+  @media (max-width:645px){
+  
+    .announcementsHeader{
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+  
+    .announcementsHeaderLeft{
+      width: 80%;
+      margin-bottom: 10px;
+      font-size: 16px;
+    }
+  
+    .announcementsHeaderRight{
+      width: 100%;
+      justify-content: space-between;
+    }
+  
+    .announcementHeaderButtonLeft {
+      font-size: 14px;
+      padding-inline: 0;
+      width: 46%;
+      display: flex;
+      justify-content: center;
+    }
+    
+    .announcementHeaderButtonRight{
+      font-size: 14px;
+      padding-inline: 0;
+      width: 46%;
+      display: flex;
+      justify-content: center;
+    }
+  }
+  
