@@ -69,7 +69,7 @@ function VisitorCard({
         isOpen={viewDetailsModal}
         onRequestClose={() => setViewDetailModal(false)}
         style={customStyles}
-        contentLabel="View Service Charge"
+        contentLabel="View visitor Card"
       >
         <div className="modalDetails">
           

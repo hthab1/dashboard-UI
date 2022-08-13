@@ -16,8 +16,8 @@ function HomeOwners() {
   const navigate = useNavigate();
   const dispatch = useDispatch()
   const [dropdown, setDropdown] = useState(false);
-  const [selected, setSelected] = useState("Newest");
   const options = ["Relevant", "Newest", "Time"];
+  const [selected, setSelected] = useState(options[0]);
   const [owners, setOwners] = useState([]);
   const listRef = useRef();
   const data = homeOwners;

@@ -1,0 +1,434 @@
+.itemRequest {
+  display: flex;
+  flex: 1;
+  padding: 15px 20px;
+  background-color: var(--color-white);
+  border: 1px solid #eeeeee;
+  align-items: flex-start;
+}
+
+.itemRequest:hover {
+  background-color: transparent;
+}
+
+.itemRequestSegments {
+  display: flex;
+  flex: 1;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding-left: 10px;
+  padding-top: 2px;
+}
+
+.itemRequestSegment {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 19px;
+  color: #171b1e;
+  width: 100px;
+  word-wrap: break-word;
+  display: flex;
+  flex-direction: column;
+}
+
+.itemRequestSegmentStatus {
+  display: flex;
+  justify-content: center;
+}
+
+.titleForitemRequestCard {
+  display: none;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: #737b8b;
+  margin-bottom: 5px;
+}
+
+.itemRequestStatus {
+  background-color: var(--color-imageBackground);
+  color: var(--color-white);
+  padding: 10px 0px;
+  width: 120px;
+  display: grid;
+  place-items: center;
+  border-radius: 30px;
+}
+
+.itemRequestPending {
+  background-color: var(--color-orange);
+}
+
+.itemRequestPaid {
+  background-color: var(--color-primary);
+}
+
+.itemRequestCompleted {
+  background-color: var(--color-green);
+}
+
+.itemRequestSegmentLarge {
+  width: 170px;
+}
+
+.itemRequestSegmentSmall {
+  width: 50px;
+}
+
+.itemRequestSegmentEnd {
+  font-size: 20px;
+  cursor: pointer;
+  width: 20px;
+  position: relative;
+}
+
+.titleForitemRequestCardCentered {
+  text-align: center;
+}
+
+.itemRequestDropdown {
+  position: absolute;
+  background-color: var(--color-white);
+  box-shadow: var(--card-shadow);
+  width: 170px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+  right: 20px;
+  top: 0;
+}
+
+.itemRequestDropdownChoice {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #737b8b;
+  cursor: pointer;
+  transition: all 100ms ease-in-out;
+}
+
+.itemRequestDropdownChoice:hover {
+  transform: scale(1.07);
+}
+
+.itemRequestUnfulfilled {
+  color: var(--color-error);
+  background: #fbe7e8;
+}
+
+.viewServiceChargeModal {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.modalCloseContainer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.modalClose {
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.modalLogo {
+  height: 80px;
+}
+
+.modalServiceChargeContent {
+  display: flex;
+  flex-direction: column;
+  padding-block: 20px;
+}
+
+.modalServiceChargeSegment {
+  border-bottom: 1px solid var(--color-inputBorder);
+  display: flex;
+  flex-direction: row;
+  padding-block: 10px 5px;
+}
+
+.modalServiceChargeContentTitle {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21px;
+  color: #171b1e;
+  width: 150px !important;
+}
+
+.modalServiceChargeContentText {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #171b1e;
+  display: inline-block;
+  word-wrap: break-word;
+  max-width: 80%;
+}
+
+.modalButtonPrintContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+.modalButtonPrint {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  padding: 10px 30px;
+  border-radius: 30px;
+  color: #ffffff;
+  background-color: var(--color-primary);
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.modalMarkQuestion {
+  display: flex;
+  text-align: center;
+  margin: 20px 30px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #171b1e;
+}
+
+.modalMarkButtons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.modalMarkButton {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  color: #464a53;
+  padding: 15px 30px;
+  border: 1px solid #464a53;
+  border-radius: 40px;
+  cursor: pointer;
+}
+
+.markModalButtonContinue {
+  border: none;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+/* modal for qr code */
+
+.modalDetails {
+  display: flex;
+  flex-direction: column;
+  min-width: 220px;
+}
+
+.modalDetailCloseContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.modalDetailsClose {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.modalDetailsName {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 26px;
+  margin-block: 10px 20px;
+}
+
+.modalDetailsSegementTitle {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 18px;
+  margin-top: 10px;
+}
+
+.modalDetailsSegementInfo {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  color: #090e23;
+}
+
+/* modal for qr code */
+
+/* modal fot view request */
+
+.modalViewRequest {
+  display: flex;
+  flex-direction: column;
+}
+
+.modalViewRequestTitle {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  margin-bottom: 5px;
+}
+
+.modalViewRequestInfo {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 5px;
+}
+
+.modalViewRequestItems {
+  margin-block: 20px;
+}
+
+.modalViewRequestItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
+  margin-block: 5px;
+}
+
+.modalViewRequestItemLeft {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.modalViewRequestItemRight {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 70px;
+  border-radius: 5px;
+  background: rgba(240, 239, 239, 0.3);
+}
+
+.modalRequestItemAvailableTitle {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 8px;
+  line-height: 12px;
+  color: #717171;
+}
+
+.modalRequestItemAvailableAmount {
+  margin-bottom: 5px;
+  text-align: center;
+  word-wrap: break-word;
+  width: 70px;
+}
+
+.modalViewRequestButtons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.modalViewRequestButtonFulfill {
+  background-color: var(--color-primary);
+  padding: 10px 30px;
+  border-radius: 40px;
+  color: var(--color-white);
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  cursor: pointer;
+  letter-spacing: 1px;
+}
+
+.modalViewRequestButtonCancel {
+  padding: 10px 30px;
+  cursor: pointer;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+
+  color: #464a53;
+}
+
+/* modal fot view request */
+
+@media (max-width: 1300px) {
+  .itemRequestSegments {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 10px;
+  }
+
+  .titleForitemRequestCard {
+    display: flex;
+  }
+}
+
+@media (max-width: 600px) {
+  .itemRequestSegments {
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 10px;
+  }
+
+  .modalServiceChargeContentTitle {
+    font-size: 14px;
+    width: 110px !important;
+  }
+
+  .modalServiceChargeContentText {
+    font-size: 14px;
+    max-width: 60%;
+  }
+
+  .itemRequestSegment {
+    width: 60vw;
+  }
+
+  .modalMarkButton {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+}

@@ -7,11 +7,11 @@ import VisitorsPassHeader from "../../../components/loggedinStack/visitorsPass/v
 import VisitorPass from "../../../components/loggedinStack/visitorsPass/visitorPass/VisitorPass";
 import { visitorsPass } from "../../../data/visitorsPass";
 import Pagination from "../../../components/loggedinStack/common/pagination/Pagination";
-import { useNavigate } from "react-router-dom"
+import { useNavigate } from "react-router-dom";
 
 function VisitorsPass() {
   const dispatch = useDispatch();
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const listRef = useRef();
   const [selectAll, setSelectAll] = useState(false);
   const [items, setItems] = useState([]);
@@ -26,11 +26,16 @@ function VisitorsPass() {
       <div className="board">
         <div className="boardContent">
           <div className="vistorsPassList">
+            <span ref={listRef}></span>
             <div className="visitorsPassHeaderContent">
-              <span className="visitorsPassHeaderButton" onClick={()=>navigate("/visitorsPass/allVisitors")}>View All Visitors</span>
+              <span
+                className="visitorsPassHeaderButton"
+                onClick={() => navigate("/visitorsPass/allVisitors")}
+              >
+                View All Visitors
+              </span>
             </div>
             <div className="visitorsPassContent">
-              <span ref={listRef}></span>
               <div className="visitorsPassContentHeader">
                 <VisitorsPassHeader check={selectAll} setCheck={setSelectAll} />
               </div>
@@ -49,19 +54,21 @@ function VisitorsPass() {
                   phone={item.phone}
                   timestamp={item.timeStamp}
                   validity={item.validity}
-                  onViewList={()=>navigate(`/visitorsPass/visitorList/${item.id}`)}
+                  onViewList={() =>
+                    navigate(`/visitorsPass/visitorList/${item.id}`)
+                  }
                 />
               ))}
             </div>
           </div>
-            <Pagination
-              itemsPerPage={6}
-              items={data}
-              setCurrentItems={setItems}
-              onPageChange={() => {
-                listRef.current.scrollIntoView({ behavior: "smooth" });
-              }}
-            />
+          <Pagination
+            itemsPerPage={6}
+            items={data}
+            setCurrentItems={setItems}
+            onPageChange={() => {
+              listRef.current.scrollIntoView({ behavior: "smooth" });
+            }}
+          />
         </div>
       </div>
     </div>

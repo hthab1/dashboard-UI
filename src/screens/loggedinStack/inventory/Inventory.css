@@ -1,0 +1,76 @@
+.inventoryRequest {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  overflow-y: scroll;
+  justify-content: flex-start;
+  width: 99%;
+  margin-block: 20px;
+}
+
+.inventoryRequest::-webkit-scrollbar {
+  display: none;
+}
+
+.inventoryRequestHeaderContent {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+  width: 99%;
+}
+
+.inventoryRequestHeaderLeft {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 26px;
+}
+
+.inventoryRequestHeaderContenButton {
+  cursor: pointer;
+  padding: 10px 20px;
+  border-radius: 10px;
+  background-color: var(--color-primary);
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: #ffffff;
+  width: fit-content;
+  height: fit-content;
+}
+
+.inventoryRequestContent {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+  width: 100%;
+}
+
+.inventoryRequestContentHeader{
+  display: flex;
+  flex: 1;
+}
+
+
+@media (max-width:1300px){
+  .inventoryRequestContentHeader{
+      display: none;
+  }
+}
+
+
+@media (max-width: 600px) {
+  .inventoryRequestHeaderLeft {
+    font-size: 18px;
+  }
+
+  .inventoryRequestHeaderContenButton {
+    font-size: 14px;
+  }
+}

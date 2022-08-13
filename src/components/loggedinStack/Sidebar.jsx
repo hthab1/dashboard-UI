@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./Sidebar.css";
 import Logo from "../../assets/Logo.svg";
 import { FiGrid, FiHome } from "react-icons/fi";
+import { BiTransferAlt } from "react-icons/bi";
 import {
   AiFillCaretRight,
   AiOutlineTag,
@@ -187,6 +188,16 @@ function Sidebar() {
             dispatch(setActiveTab("service charge"));
             dispatch(setMobileSidebar(false));
             navigate("/serviceCharge");
+          }}
+        />
+        <SidebarOption
+          name="Transactions"
+          icon={<BiTransferAlt />}
+          active={active === "transactions" && true}
+          onClick={() => {
+            dispatch(setActiveTab("transactions"));
+            dispatch(setMobileSidebar(false));
+            navigate("/transactions");
           }}
         />
         <SidebarOption

@@ -1,0 +1,210 @@
+.transactions{
+    position: relative;
+}
+
+.transactionsContent {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    overflow-y: scroll;
+    justify-content: flex-start;
+    align-items: center;
+    margin-block: 20px;
+  }
+  
+  .transactionsContent::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .transactionsContentHeader{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 99%;
+      margin-top: 5px;
+  }
+  
+  .addtransactionsButton{
+      font-family: "Roboto";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 19px;
+      text-align: center;
+      color: #ffffff;
+      cursor: pointer;
+      background:var(--color-primary);
+      height: 40px;
+      border: 1px solid var(--color-primary);
+      border-radius: 15px;
+      display: flex;
+      align-items: center;
+      padding-inline: 30px;
+      margin-left: 20px;
+      width: fit-content;
+  }
+  
+  .transactionsInfoCards{
+      display: flex;
+      flex: 1;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: center;
+  }
+  
+  .transactionstransactions{
+      display: flex;
+      flex-direction: column;
+      margin-top: 30px;
+      width: 100%;
+  }
+  
+  .transactionsListHeader{
+      display: flex;
+      flex: 1;
+  }
+  
+  
+  @media (max-width:1300px){
+      .transactionsListHeader{
+          display: none;
+      }
+  }
+  
+  @media (max-width:1070px){
+      .transactionsContentHeader{
+          display: flex;
+          flex-direction: column;
+      }
+  
+      .transactionsInfoCards{
+          margin-top: 10px;
+          justify-content: center;
+      }
+  }
+  
+  @media (max-width:600px){
+      .transactionsContentHeader{
+          align-items: center;
+      }
+      
+      .transactionsInfoCards{
+          align-items: center;
+          justify-content: center;
+      }
+  }
+
+  .transactionsRowHeader{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.transactionsRowHeaderLeft{
+    display: flex;
+    align-items: center;
+    width: 50%;
+    gap: 10px;
+}
+
+.homeOwerAddButton{
+    border-radius: 15px;
+  background-color: var(--color-primary);
+  display: flex;
+  padding: 10px 20px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  color: var(--color-white);
+  width: fit-content;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.transactionsRowSearch{
+    flex: 1;
+}
+
+.transactionsRowHeaderRight{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    width: 50%;
+    justify-content: flex-end;
+}
+
+.transactionsRowFilterButton {
+  border-radius: 15px;
+  background-color: var(--color-primary);
+  display: flex;
+  gap: 10px;
+  padding: 10px 0;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  color: var(--color-white);
+  width: 120px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.transactionsRowFilterIcon {
+  display: flex;
+  align-items: center;
+}
+
+
+.transactionsRowRefresh{
+    border-radius: 15px;
+  background-color: var(--color-orange);
+  display: flex;
+  padding: 10px;
+  font-weight: 600;
+  font-size: 28px;
+  color: var(--color-white);
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  width: fit-content;
+}
+
+@media (max-width:1120px){
+    .homeOwerAddButton{
+        font-size: 16px;
+    }
+
+    .transactionsRowFilterButton{
+        font-size: 16px;
+    }
+
+    .transactionsRowRefresh{
+        font-size: 24px;
+    }
+}
+
+@media (max-width:1050px){
+    .transactionsRowHeader{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .transactionsRowHeaderLeft{
+        width: 80%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .transactionsRowHeaderRight{
+        width: 100%;
+        justify-content: center;
+        margin-top: 10px;
+    }
+}

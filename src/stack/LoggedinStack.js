@@ -35,6 +35,10 @@ import MakePayment from "../screens/loggedinStack/serviceCharge/makePayment/Make
 import RequestScreen from "../screens/loggedinStack/maintenance/request/RequestScreen";
 import AllVisitors from "../screens/loggedinStack/visitorsPass/visitors/AllVisitors";
 import VisitorList from "../screens/loggedinStack/visitorsPass/visitors/VisitorList";
+import AllInventory from "../screens/loggedinStack/inventory/allInventory/AllInventory";
+import AddProduct from "../screens/loggedinStack/inventory/addProduct/AddProduct";
+import EditProduct from "../screens/loggedinStack/inventory/addProduct/EditProduct";
+import Transactions from "../screens/loggedinStack/transactions/Transactions";
 
 function LoggedinStack() {
   const on = useSelector((state) => state.sidebar.mobileSidebar);
@@ -64,21 +68,54 @@ function LoggedinStack() {
             {/* users routes */}
             <Route path="/users/tenants" element={<Tenants />} />
             <Route path="/users/tenants/addTenant" element={<AddTenants />} />
-            <Route path="/users/tenants/assignProperty" element={<AssignProperty />} />
-            <Route path="/users/tenants/setServiceCharge" element={<SetServiceCharge />} />
-            <Route path="/users/tenants/addTenantConfirmation" element={<AddTenantConfirmation />} />
+            <Route
+              path="/users/tenants/assignProperty"
+              element={<AssignProperty />}
+            />
+            <Route
+              path="/users/tenants/setServiceCharge"
+              element={<SetServiceCharge />}
+            />
+            <Route
+              path="/users/tenants/addTenantConfirmation"
+              element={<AddTenantConfirmation />}
+            />
 
             <Route path="/users/homeOwners" element={<HomeOwners />} />
-            <Route path="/users/homeOwners/addHomeOwner" element={<AddHomeOwner />} />
-            <Route path="/users/homeOwners/assignHomeOwnerProperty" element={<AssignHomeOwnerProperty />} />
-            <Route path="/users/homeOwners/setHomeOwnerServiceCharge" element={<SetHomeOwnerServiceCharge />} />
-            <Route path="/users/homeOwners/addHomeOwnerConfirmation" element={<AddHomeOwnerConfirmation />} />
+            <Route
+              path="/users/homeOwners/addHomeOwner"
+              element={<AddHomeOwner />}
+            />
+            <Route
+              path="/users/homeOwners/assignHomeOwnerProperty"
+              element={<AssignHomeOwnerProperty />}
+            />
+            <Route
+              path="/users/homeOwners/setHomeOwnerServiceCharge"
+              element={<SetHomeOwnerServiceCharge />}
+            />
+            <Route
+              path="/users/homeOwners/addHomeOwnerConfirmation"
+              element={<AddHomeOwnerConfirmation />}
+            />
 
             <Route path="/users/subscribers" element={<Subscribers />} />
-            <Route path="/users/subscribers/addSubscriber" element={<AddSubscriber />} />
-            <Route path="/users/subscribers/assignSubscriberProperty" element={<SubscriberProperty />} />
-            <Route path="/users/subscribers/setSubscriberPropertyPrice" element={<SubscriberPropertyPrice />} />
-            <Route path="/users/subscribers/addSubscriberConfirmation" element={<AddSubscriberConfirmation />} />
+            <Route
+              path="/users/subscribers/addSubscriber"
+              element={<AddSubscriber />}
+            />
+            <Route
+              path="/users/subscribers/assignSubscriberProperty"
+              element={<SubscriberProperty />}
+            />
+            <Route
+              path="/users/subscribers/setSubscriberPropertyPrice"
+              element={<SubscriberPropertyPrice />}
+            />
+            <Route
+              path="/users/subscribers/addSubscriberConfirmation"
+              element={<AddSubscriberConfirmation />}
+            />
 
             {/* property routes */}
             <Route path="/property/addProperty" element={<AddProperty />} />
@@ -90,19 +127,37 @@ function LoggedinStack() {
 
             {/* serviceCharge routes */}
             <Route path="/serviceCharge" element={<ServiceCharge />} />
-            <Route path="/serviceCharge/makePayment/:serviceChargeId" element={<MakePayment />} />
+            <Route
+              path="/serviceCharge/makePayment/:serviceChargeId"
+              element={<MakePayment />}
+            />
+
+            {/* transactions routes */}
+            <Route path="/transactions" element={<Transactions />} />
 
             {/* maintenance Routes */}
             <Route path="/requests" element={<Requests />} />
-            <Route path="/requests/requestScreen/:requestId" element={<RequestScreen />} />
+            <Route
+              path="/requests/requestScreen/:requestId"
+              element={<RequestScreen />}
+            />
 
             {/* visitorsPass Routes */}
             <Route path="/visitorsPass" element={<VisitorsPass />} />
             <Route path="/visitorsPass/allVisitors" element={<AllVisitors />} />
-            <Route path="/visitorsPass/visitorList/:visitorListId" element={<VisitorList />} />
+            <Route
+              path="/visitorsPass/visitorList/:visitorListId"
+              element={<VisitorList />}
+            />
 
             {/* inventory Routes */}
             <Route path="/inventory" element={<Inventory />} />
+            <Route path="/inventory/viewInventory" element={<AllInventory />} />
+            <Route path="/inventory/addProduct" element={<AddProduct />} />
+            <Route
+              path="/inventory/editProduct/:productId"
+              element={<EditProduct />}
+            />
 
             {/* announcements Routes */}
             <Route path="/announcements" element={<Announcements />} />

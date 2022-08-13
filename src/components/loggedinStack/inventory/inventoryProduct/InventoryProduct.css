@@ -1,0 +1,153 @@
+.inventoryProduct {
+  display: flex;
+  flex: 1;
+  padding: 15px 20px;
+  background-color: var(--color-white);
+  border: 1px solid #eeeeee;
+  align-items: flex-start;
+}
+
+.inventoryProduct:hover {
+  background-color: transparent;
+}
+
+.inventoryProductSegments {
+  display: flex;
+  flex: 1;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding-left: 10px;
+  padding-top: 2px;
+}
+
+.inventoryProductSegment {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 19px;
+  color: #171b1e;
+  width: 100px;
+  word-wrap: break-word;
+  display: flex;
+  flex-direction: column;
+}
+
+.inventoryProductSegmentStatus {
+  display: flex;
+  justify-content: center;
+}
+
+.titleForinventoryProductCard {
+  display: none;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: #737b8b;
+  margin-bottom: 5px;
+}
+
+.inventoryProductStatus {
+  background-color: var(--color-imageBackground);
+  color: var(--color-white);
+  padding: 10px 0px;
+  width: 120px;
+  display: grid;
+  place-items: center;
+  border-radius: 30px;
+}
+
+.inventoryProductPending {
+  background-color: var(--color-orange);
+}
+
+.inventoryProductPaid {
+  background-color: var(--color-primary);
+}
+
+.inventoryProductCompleted {
+  background-color: var(--color-green);
+}
+
+.inventoryProductSegmentLarge {
+  width: 170px;
+}
+
+.inventoryProductSegmentSmall {
+  width: 50px;
+}
+
+.inventoryProductSegmentEnd {
+  font-size: 20px;
+  cursor: pointer;
+  width: 20px;
+  position: relative;
+}
+
+.titleForinventoryProductCardCentered {
+  text-align: center;
+}
+
+.inventoryProductDropdown {
+  position: absolute;
+  background-color: var(--color-white);
+  box-shadow: var(--card-shadow);
+  width: 170px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+  right: 20px;
+  top: 0;
+}
+
+.inventoryProductDropdownChoice {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #737b8b;
+  cursor: pointer;
+  transition: all 100ms ease-in-out;
+}
+
+.inventoryProductDropdownChoice:hover {
+  transform: scale(1.07);
+}
+
+.inventoryProductUnfulfilled {
+  color: var(--color-error);
+  background: #fbe7e8;
+}
+
+@media (max-width: 1300px) {
+  .inventoryProductSegments {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 10px;
+  }
+
+  .titleForinventoryProductCard {
+    display: flex;
+  }
+}
+
+@media (max-width: 600px) {
+  .inventoryProductSegments {
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 10px;
+  }
+
+  .titleForinventoryProductCardCentered{
+    text-align: left;
+  }
+
+  .inventoryProductSegment {
+    width: 60vw;
+  }
+}
