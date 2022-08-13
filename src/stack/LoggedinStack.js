@@ -39,6 +39,8 @@ import AllInventory from "../screens/loggedinStack/inventory/allInventory/AllInv
 import AddProduct from "../screens/loggedinStack/inventory/addProduct/AddProduct";
 import EditProduct from "../screens/loggedinStack/inventory/addProduct/EditProduct";
 import Transactions from "../screens/loggedinStack/transactions/Transactions";
+import AddStaff from "../screens/loggedinStack/staff/addStaff/AddStaff";
+import EditStaff from "../screens/loggedinStack/staff/addStaff/EditStaff";
 
 function LoggedinStack() {
   const on = useSelector((state) => state.sidebar.mobileSidebar);
@@ -167,6 +169,8 @@ function LoggedinStack() {
 
             {/* staff Routes */}
             <Route path="/staff" element={<Staff />} />
+            <Route path="/staff/addStaff" element={<AddStaff />} />
+            <Route path="/staff/editStaff/:staffId" element={<EditStaff />} />
           </Routes>
         </div>
       </div>

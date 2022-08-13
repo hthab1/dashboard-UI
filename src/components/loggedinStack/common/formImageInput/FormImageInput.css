@@ -1,0 +1,41 @@
+.formImageInput {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.formImageInputError {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--color-error);
+  margin-top: 10px;
+}
+
+.formImageContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-imageBackground);
+  width: 160px;
+  height: 180px;
+  cursor: pointer;
+}
+
+.formImageImage{
+    width: 160px;
+    height: 180px;
+    object-fit: cover;
+}
+
+.formImagePlaceHolder {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 26px;
+  color: #948a8a;
+}

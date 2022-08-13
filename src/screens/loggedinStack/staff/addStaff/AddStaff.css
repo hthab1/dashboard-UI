@@ -1,0 +1,35 @@
+.addStaffContent{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow-y: scroll;
+}
+
+.addStaffContentHeader{
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 26px;
+display: flex;
+}
+
+.addStaffBack{
+    display: grid;
+    place-items: center;
+    margin-right: 10px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.addStaffContentForm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-block: 50px;
+    flex: 1;
+}
+
+.addStaffContent::-webkit-scrollbar{
+    display: none;
+}

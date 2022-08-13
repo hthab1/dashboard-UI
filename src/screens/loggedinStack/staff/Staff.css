@@ -1,0 +1,111 @@
+.staff {
+    height: 100vh;
+  }
+  
+  .staffHeader {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .staffHeaderLeft {
+    width: 40%;
+    max-width: 250px;
+  }
+  
+  .staffHeaderRight {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .tenantHeaderButtonRight {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: #ffffff;
+    cursor: pointer;
+    background:var(--color-primary);
+    height: 40px;
+    border: 1px solid var(--color-primary);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    padding-inline: 30px;
+    margin-left: 20px;
+  }
+  
+  .staffContent{
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    overflow-y: scroll;
+    justify-content: center;
+    align-items: flex-start;
+    margin-block: 20px;
+  }
+  
+  .staffStaff{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  
+  .staffContent::-webkit-scrollbar{
+  display: none;
+  }
+  
+  @media (max-width:980px){
+    .tenantHeaderButtonLeft {
+      font-size: 14px;
+      padding-inline: 20px;
+    }
+    
+    .tenantHeaderButtonRight{
+      font-size: 14px;
+      padding-inline: 20px;
+    }
+  }
+  
+  @media (max-width:645px){
+  
+    .staffHeader{
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+  
+    .staffHeaderLeft{
+      width: 80%;
+      margin-bottom: 10px;
+    }
+  
+    .staffHeaderRight{
+      width: 100%;
+      justify-content: space-between;
+    }
+  
+    .tenantHeaderButtonLeft {
+      font-size: 14px;
+      padding-inline: 0;
+      width: 46%;
+      display: flex;
+      justify-content: center;
+    }
+    
+    .staffHeaderButtonRight{
+      font-size: 14px;
+      padding-inline: 0;
+      width: 46%;
+      display: flex;
+      justify-content: center;
+    }
+  }
+  

@@ -1,0 +1,155 @@
+.staffCard {
+    display: flex;
+    box-shadow: var(--card-shadow);
+    width: 99%;
+    align-self: center;
+    margin-block: 10px;
+    border-radius: 10px;
+    background-color: var(--color-white);
+  }
+  
+  .staffCardContent {
+    display: flex;
+    flex: 1;
+    margin: 20px;
+  }
+  
+  .staffCardImage {
+    background-color: var(--color-imageBackground);
+    width: 70px;
+    height: 70px;
+    border-radius: 10px;
+    margin-right: 20px;
+    object-fit: cover;
+  }
+  
+  .staffCardContentInfo {
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .staffCardContentInfoSegments {
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .staffCardContentInfoSegment {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-inline: 10px;
+  }
+  
+  .staffCardId {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    color: #00695e;
+    margin-bottom: 10px;
+  }
+  
+  .staffCardTimestamp {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    color: #737b8b;
+    line-height: 24px;
+  }
+  
+  .staffCardSegmentTitle {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: #737b8b;
+    margin-bottom: 10px;
+  }
+  
+  .staffCardSegmentMainText {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    color: #273240;
+    line-height: 30px;
+    width: 200px;
+    word-wrap: break-word;
+  }
+
+  .staffCardSegmentMainTextLarge{
+    width: 250px;
+  }
+  
+  .staffCardContentInfoButton {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    color: #00695e;
+    padding: 10px;
+    border: 1px solid #00695e;
+    border-radius: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    width: fit-content;
+    height: fit-content;
+  }
+  
+  .staffCardMore {
+    position: relative;
+  }
+  
+  .staffCardMoreIcon {
+    font-size: 20px;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .staffCardDropdown {
+    position: absolute;
+    background-color: var(--color-white);
+    box-shadow: var(--card-shadow);
+    width: 170px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    right: 10px;
+  }
+  
+  .staffCardDropdownChoice {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #737b8b;
+    cursor: pointer;
+    transition: all 100ms ease-in-out;
+  }
+  
+  .staffCardDropdownChoice:hover{
+      transform: scale(1.07);
+  }
+  
+  @media (max-width: 600px) {
+    .staffCardImage {
+      margin-right: 10px;
+    }
+  
+    .staffCardContentInfoSegment {
+      width: 150px;
+    }
+  
+    .staffCardSegmentMainText {
+      font-size: 14px;
+    }
+  }
+  
