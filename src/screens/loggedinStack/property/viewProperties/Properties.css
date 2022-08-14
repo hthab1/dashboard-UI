@@ -21,11 +21,11 @@
   align-items: center;
 }
 
-.viewPropertiesBack{
-    display: grid;
-    place-items: center;
-    margin-right: 10px;
-    font-size: 16px;
+.viewPropertiesBack {
+  display: grid;
+  place-items: center;
+  margin-right: 10px;
+  font-size: 16px;
 }
 
 .viewPropertiesHeaderRight {
@@ -91,6 +91,181 @@
   display: none;
 }
 
+.viewPropertyContainer {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  overflow: scroll;
+  align-items: center;
+  padding-block: 50px;
+  margin-top: 10px;
+}
+
+.viewPropertyContainer::-webkit-scrollbar {
+  display: none;
+}
+
+.viewPropertiesProperty {
+  background-color: var(--color-white);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 85%;
+  padding: 5%;
+  box-shadow: var(--card-shadow);
+}
+
+.viewPropertiesPropertyHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: fit-content;
+  margin: 20px;
+  border-radius: 20px;
+  flex-wrap: wrap;
+  color: var(--color-white);
+  background-color: var(--color-primary);
+  padding: 5% 10%;
+  margin-bottom: 40px;
+}
+
+.viewPropertiesPropertyHeaderLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.viewPropertiesPropertyName {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 32px;
+  line-height: 38px;
+  color: var(--color-white);
+}
+
+.viewPropertiesPropertyPriceContainer {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.viewPropertiesPropertyPrice {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 38px;
+  color: var(--color-white);
+}
+
+.viewPropertiesPropertyPriceTag {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  color: var(--color-white);
+  background-color: var(--color-orange);
+  border-radius: 40px;
+  padding: 5px 10px;
+  border: 2px solid var(--color-white);
+  display: grid;
+  place-items: center;
+}
+
+.viewPropertiesPropertyHeaderRight {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: var(--color-white);
+  background-color: var(--color-green);
+  border-radius: 30px;
+  padding: 10px 30px;
+  width: fit-content;
+  height: fit-content;
+}
+
+.viewPropertyDetailsContainer {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+}
+
+.viewPropertyDetailsTitle {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 28px;
+  margin-bottom: 25px;
+  color: #0c0c0c;
+}
+
+.viewPropertyDetailsDetail {
+  font-family: "poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: #171b1e;
+  margin-bottom: 30px;
+}
+
+.viewPropertiesGallery{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.viewPropertiesGallerySlider{
+    display: flex;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    width: 70vw;
+}
+
+.viewPropertiesGallerySlider::-webkit-scrollbar{
+    display: none;
+}
+
+.viewPropertyGalleryArrow{
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 100px;
+    width: 40px;
+    height: 40px;
+    box-shadow: var(--card-shadow);
+    background-color: var(--color-white);
+    display: grid;
+    place-items: center;
+    position: absolute;
+    align-items: center;
+    right: 30px;
+    opacity: 0.7;
+    z-index: 999;
+}
+
+.viewPropertyGalleryImage{
+    width: 240px;
+    height: 150px;
+    border-radius: 20px;
+    overflow: hidden;
+    object-fit: cover;
+    background-color: var(--color-imageBackground);
+    margin-right: 15px;
+    flex-shrink: 0;
+}
+
 @media (max-width: 980px) {
   .viewPropertieHeaderButtonLeft {
     font-size: 14px;
@@ -136,5 +311,23 @@
     width: 46%;
     display: flex;
     justify-content: center;
+  }
+
+  .viewPropertiesPropertyName {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .viewPropertiesPropertyPrice {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .viewPropertiesPropertyHeaderRight {
+    font-size: 14px;
+  }
+
+  .viewPropertyDetailsTitle {
+    font-size: 18px;
   }
 }

@@ -44,6 +44,8 @@ import EditStaff from "../screens/loggedinStack/staff/addStaff/EditStaff";
 import AddNews from "../screens/loggedinStack/announcements/addNews/AddNews";
 import EditNews from "../screens/loggedinStack/announcements/addNews/EditNews";
 import ViewProperties from "../screens/loggedinStack/property/viewProperties/ViewProperties";
+import ViewProperty from "../screens/loggedinStack/property/viewProperties/ViewProperty";
+import ViewManageProperty from "../screens/loggedinStack/property/viewProperties/ViewManageProperty";
 
 function LoggedinStack() {
   const on = useSelector((state) => state.sidebar.mobileSidebar);
@@ -125,8 +127,10 @@ function LoggedinStack() {
             {/* property routes */}
             <Route path="/property/addProperty" element={<AddProperty />} />
             <Route path="/property/properties" element={<Properties />} />
+            <Route path="/property/properties/viewProperty/:propertyId" element={<ViewProperty />} />
             <Route path="/property/developments" element={<Developments />} />
             <Route path="/property/developments/properties/:developmentId" element={<ViewProperties />} />
+            <Route path="/property/developments/properties/viewProperty/:viewPropertyId" element={<ViewManageProperty />} />
 
             {/* subscriptions routes */}
             <Route path="/subscriptions" element={<Subscriptions />} />

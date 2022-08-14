@@ -26,7 +26,7 @@ function ViewProperties() {
         <div className="boardContent">
           <div className="viewPropertiesHeader">
             <div className="viewPropertiesHeaderLeft">
-              <div className="viewPropertiesBack" onClick={()=>navigate(-1)}>
+              <div className="viewPropertiesBack" onClick={() => navigate(-1)}>
                 <BsChevronLeft />
               </div>
               View Properties
@@ -45,6 +45,16 @@ function ViewProperties() {
                   propertyType={item.propertyType}
                   serviceType={item.serviceType}
                   unit={item.unit}
+                  onView={() =>
+                    navigate(
+                      `/property/developments/properties/viewProperty/${item.id}`,
+                      {
+                        state: {
+                          property: item,
+                        },
+                      }
+                    )
+                  }
                   // onEdit={() =>
                   //   navigate(`/viewProperties/editNews/${item.id}`, {
                   //     state: {
