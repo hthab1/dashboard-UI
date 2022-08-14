@@ -46,6 +46,10 @@ import EditNews from "../screens/loggedinStack/announcements/addNews/EditNews";
 import ViewProperties from "../screens/loggedinStack/property/viewProperties/ViewProperties";
 import ViewProperty from "../screens/loggedinStack/property/viewProperties/ViewProperty";
 import ViewManageProperty from "../screens/loggedinStack/property/viewProperties/ViewManageProperty";
+import AddDevelopment from "../screens/loggedinStack/property/addProperty/AddDevelopment";
+import EditDevelopment from "../screens/loggedinStack/property/addProperty/EditDevelopment";
+import EditProperty from "../screens/loggedinStack/property/addProperty/EditProperty";
+import EditDevelopmentProperty from "../screens/loggedinStack/property/addProperty/EditDevelopmentProperty";
 
 function LoggedinStack() {
   const on = useSelector((state) => state.sidebar.mobileSidebar);
@@ -127,10 +131,35 @@ function LoggedinStack() {
             {/* property routes */}
             <Route path="/property/addProperty" element={<AddProperty />} />
             <Route path="/property/properties" element={<Properties />} />
-            <Route path="/property/properties/viewProperty/:propertyId" element={<ViewProperty />} />
+            <Route
+              path="/property/properties/viewProperty/:propertyId"
+              element={<ViewProperty />}
+            />
+            <Route
+              path="/property/properties/editProperty/:editPropertyId"
+              element={<EditProperty />}
+            />
+            <Route
+              path="/property/developments/editProperty/:editDevelopmentPropertyId"
+              element={<EditDevelopmentProperty />}
+            />
             <Route path="/property/developments" element={<Developments />} />
-            <Route path="/property/developments/properties/:developmentId" element={<ViewProperties />} />
-            <Route path="/property/developments/properties/viewProperty/:viewPropertyId" element={<ViewManageProperty />} />
+            <Route
+              path="/property/developments/addDevelopment"
+              element={<AddDevelopment />}
+            />
+            <Route
+              path="/property/developments/editDevelopment/:editDevelopmentId"
+              element={<EditDevelopment />}
+            />
+            <Route
+              path="/property/developments/properties/:developmentId"
+              element={<ViewProperties />}
+            />
+            <Route
+              path="/property/developments/properties/viewProperty/:viewPropertyId"
+              element={<ViewManageProperty />}
+            />
 
             {/* subscriptions routes */}
             <Route path="/subscriptions" element={<Subscriptions />} />
@@ -172,7 +201,10 @@ function LoggedinStack() {
             {/* announcements Routes */}
             <Route path="/announcements" element={<Announcements />} />
             <Route path="/announcements/addNews" element={<AddNews />} />
-            <Route path="/announcements/editNews/:newsId" element={<EditNews />} />
+            <Route
+              path="/announcements/editNews/:newsId"
+              element={<EditNews />}
+            />
 
             {/* settings Routes */}
             <Route path="/settings" element={<Settings />} />

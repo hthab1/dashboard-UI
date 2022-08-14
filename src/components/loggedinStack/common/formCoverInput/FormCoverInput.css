@@ -1,0 +1,49 @@
+.formCoverInput {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .formCoverInputError {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--color-error);
+    margin-top: 10px;
+  }
+  
+  .formCoverContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-imageBackground);
+    width: 220px;
+    height: 160px;
+    cursor: pointer;
+    border-radius: 20px;
+    overflow: hidden;
+  }
+  
+  .formCoverCover{
+      width: 220px;
+      height: 160px;
+      object-fit: cover;
+  }
+  
+  .formCoverPlaceHolder {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 26px;
+    color: #948a8a;
+  }
+  
+  @media (max-width:600px){
+    .formCoverInputLabel {
+        font-size: 14px;
+      }
+  }

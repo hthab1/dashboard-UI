@@ -55,13 +55,13 @@ function ViewProperties() {
                       }
                     )
                   }
-                  // onEdit={() =>
-                  //   navigate(`/viewProperties/editNews/${item.id}`, {
-                  //     state: {
-                  //       news: item,
-                  //     },
-                  //   })
-                  // }
+                  onEdit={() =>
+                    navigate(`/property/developments/editProperty/${item.id}`, {
+                      state: {
+                        property: item,
+                      },
+                    })
+                  }
                 />
               ))}
             </div>

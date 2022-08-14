@@ -1,0 +1,19 @@
+.addPropertyForm{
+    background-color: var(--color-white);
+    box-shadow: var(--card-shadow);
+    padding: 50px;
+    width: 30vw;
+}
+
+@media (max-width: 900px){
+    .addPropertyForm{
+        width: 60vw;
+    }
+}
+
+@media (max-width: 600px){
+    .addPropertyForm{
+        width: 70vw;
+        padding-inline: 30px;
+    }
+}

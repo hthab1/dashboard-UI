@@ -3,7 +3,7 @@ import Header from "../../../../components/loggedinStack/Header";
 import "./AddProperty.css";
 import { useDispatch } from "react-redux";
 import { setActiveTab } from "../../../../reducers/sidebarReducer";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import Pagination from "../../../../components/loggedinStack/common/pagination/Pagination";
 import Property from "../../../../components/loggedinStack/properties/property/Property";
 import { properties } from "../../../../data/properties";
@@ -11,29 +11,39 @@ import { BsChevronLeft } from "react-icons/bs";
 import { useState } from "react";
 import AddPropertyForm from "../../../../components/loggedinStack/properties/addPropertyForm/AddPropertyForm";
 
-function AddProperty() {
+function EditProperty() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const [propertyName, setPropertyName] = useState("");
-  const [development, setDevelopment] = useState("");
-  const [propertyType, setPropertyType] = useState("");
-  const [noOfUnits, setNoOfUnits] = useState("");
-  const [price, setPrice] = useState("");
-  const [serviceChargeType, setServiceChargeType] = useState("");
-  const [location, setLocation] = useState("");
-  const [description, setDescription] = useState("");
-  const [coverImage, setCoverImage] = useState("");
-  const [gallery, setGallery] = useState([]);
+  const dataLocation = useLocation();
+  const property = dataLocation.state.property;
+
+  const [propertyName, setPropertyName] = useState(property.name);
+  const [development, setDevelopment] = useState(property.development);
+  const [propertyType, setPropertyType] = useState(property.propertyType);
+  const [noOfUnits, setNoOfUnits] = useState(property.unit);
+  const [price, setPrice] = useState(property.price);
+  const [serviceChargeType, setServiceChargeType] = useState(
+    property.serviceType
+  );
+  const [location, setLocation] = useState(property.location);
+  const [description, setDescription] = useState(property.description);
+  const [coverImage, setCoverImage] = useState(property.image);
+  const [gallery, setGallery] = useState(property.gallery);
 
   useEffect(() => {
-    dispatch(setActiveTab("add property"));
+    dispatch(setActiveTab("view properties"));
   }, []);
   return (
     <div className="addProperty loadedPage">
-      <Header pageName="Add Property" />
+      <Header pageName="Properties" />
       <div className="board">
         <div className="boardContent">
-          <div className="addPropertyHeaderLeft">Add Property</div>
+          <div className="addPropertyHeaderLeft">
+            <div className="addPropertyBack" onClick={() => navigate(-1)}>
+              <BsChevronLeft />
+            </div>
+            Edit Property
+          </div>
           <div className="addpropertyFormcontainer">
             <AddPropertyForm
               propertyName={propertyName}
@@ -64,4 +74,4 @@ function AddProperty() {
   );
 }
 
-export default AddProperty;
+export default EditProperty;

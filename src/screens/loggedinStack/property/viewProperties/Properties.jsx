@@ -46,13 +46,13 @@ function Properties() {
                       },
                     })
                   }
-                  // onEdit={() =>
-                  //   navigate(`/viewProperties/editNews/${item.id}`, {
-                  //     state: {
-                  //       news: item,
-                  //     },
-                  //   })
-                  // }
+                  onEdit={() =>
+                    navigate(`/property/properties/editProperty/${item.id}`, {
+                      state: {
+                        property: item,
+                      },
+                    })
+                  }
                 />
               ))}
             </div>

@@ -5,6 +5,16 @@
   align-items: flex-start;
 }
 
+.formCoverInputLabel {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 20px;
+  color: var(--color-headerText);
+  margin-bottom: 10px;
+}
+
 .formImageInputError {
   font-family: "Poppins";
   font-style: normal;

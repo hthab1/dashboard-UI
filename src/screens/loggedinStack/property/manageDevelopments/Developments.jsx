@@ -28,7 +28,12 @@ function Developments() {
           <div className="viewDevelopmentsHeader">
             <div className="viewDevelopmentsHeaderLeft">View Developments</div>
             <div className="viewDevelopmentsHeaderRight">
-              <div className="viewDevelopmentsHeaderButtonRight">
+              <div
+                className="viewDevelopmentsHeaderButtonRight"
+                onClick={() =>
+                  navigate("/property/developments/addDevelopment")
+                }
+              >
                 Add Development
               </div>
             </div>
@@ -49,13 +54,13 @@ function Developments() {
                   onView={() => {
                     navigate(`/property/developments/properties/${item.id}`);
                   }}
-                  // onEdit={() =>
-                  //   navigate(`/viewDevelopments/editNews/${item.id}`, {
-                  //     state: {
-                  //       news: item,
-                  //     },
-                  //   })
-                  // }
+                  onEdit={() =>
+                    navigate(`/property/developments/editDevelopment/${item.id}`, {
+                      state: {
+                        development: item,
+                      },
+                    })
+                  }
                 />
               ))}
             </div>

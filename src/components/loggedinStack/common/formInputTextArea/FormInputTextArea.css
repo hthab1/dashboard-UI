@@ -1,0 +1,58 @@
+.formInputTextArea {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-start;
+    margin-bottom: 20px;
+  }
+  
+  .formInputTextAreaLabel {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 20px;
+    color: var(--color-headerText);
+    margin-bottom: 10px;
+  }
+  
+  .formInputTextAreaInput {
+    border: 1px solid var(--color-green);
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--color-headerText);
+    display: flex;
+    width: 90%;
+    padding: 10px 2%;
+    margin-bottom: 10px;
+    resize: none;
+  }
+  
+  .formInputTextAreaError {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--color-error);
+  }
+  
+  @media (max-width: 600px) {
+    .formInputTextAreaInput {
+      width: 85%;
+      padding-inline: 20px;
+      font-size: 14px;
+    }
+  
+    .formInputTextAreaLabel {
+      font-size: 14px;
+    }
+  
+    .formInputTextAreaError {
+      font-size: 12px;
+    }
+  }
+  

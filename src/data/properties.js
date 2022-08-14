@@ -2,7 +2,7 @@ export const properties = [
   {
     id: "0067452",
     name: "TM Burrows",
-    development: "TM Burrrows",
+    development: "TM Burrows",
     propertyType: "Duplex",
     serviceType: "Rent",
     unit: "15",
@@ -26,7 +26,7 @@ export const properties = [
   {
     id: "0067452",
     name: "TM Burrows",
-    development: "TM Burrrows",
+    development: "TM Burrows",
     propertyType: "Duplex",
     serviceType: "Rent",
     unit: "15",
@@ -50,7 +50,7 @@ export const properties = [
   {
     id: "0067452",
     name: "TM Burrows",
-    development: "TM Burrrows",
+    development: "TM Burrows",
     propertyType: "Duplex",
     serviceType: "Rent",
     unit: "15",
@@ -74,7 +74,7 @@ export const properties = [
   {
     id: "0067452",
     name: "TM Burrows",
-    development: "TM Burrrows",
+    development: "TM Burrows",
     propertyType: "Duplex",
     serviceType: "Rent",
     unit: "15",
@@ -98,7 +98,7 @@ export const properties = [
   {
     id: "0067452",
     name: "TM Burrows",
-    development: "TM Burrrows",
+    development: "TM Burrows",
     propertyType: "Duplex",
     serviceType: "Rent",
     unit: "15",
@@ -122,7 +122,7 @@ export const properties = [
   {
     id: "0067452",
     name: "TM Burrows",
-    development: "TM Burrrows",
+    development: "TM Burrows",
     propertyType: "Duplex",
     serviceType: "Rent",
     unit: "15",
@@ -146,7 +146,7 @@ export const properties = [
   {
     id: "0067452",
     name: "TM Burrows",
-    development: "TM Burrrows",
+    development: "TM Burrows",
     propertyType: "Duplex",
     serviceType: "Rent",
     unit: "15",
@@ -170,7 +170,7 @@ export const properties = [
   {
     id: "0067452",
     name: "TM Burrows",
-    development: "TM Burrrows",
+    development: "TM Burrows",
     propertyType: "Duplex",
     serviceType: "Rent",
     unit: "15",
@@ -194,7 +194,7 @@ export const properties = [
   {
     id: "0067452",
     name: "TM Burrows",
-    development: "TM Burrrows",
+    development: "TM Burrows",
     propertyType: "Duplex",
     serviceType: "Rent",
     unit: "15",
@@ -218,7 +218,7 @@ export const properties = [
   {
     id: "0067452",
     name: "TM Burrows",
-    development: "TM Burrrows",
+    development: "TM Burrows",
     propertyType: "Duplex",
     serviceType: "Rent",
     unit: "15",
@@ -242,7 +242,7 @@ export const properties = [
   {
     id: "0067452",
     name: "TM Burrows",
-    development: "TM Burrrows",
+    development: "TM Burrows",
     propertyType: "Duplex",
     serviceType: "Rent",
     unit: "15",
@@ -266,7 +266,7 @@ export const properties = [
   {
     id: "0067452",
     name: "TM Burrows",
-    development: "TM Burrrows",
+    development: "TM Burrows",
     propertyType: "Duplex",
     serviceType: "Rent",
     unit: "15",
@@ -290,7 +290,7 @@ export const properties = [
   {
     id: "0067452",
     name: "TM Burrows",
-    development: "TM Burrrows",
+    development: "TM Burrows",
     propertyType: "Duplex",
     serviceType: "Rent",
     unit: "15",
@@ -314,7 +314,7 @@ export const properties = [
   {
     id: "0067452",
     name: "TM Burrows",
-    development: "TM Burrrows",
+    development: "TM Burrows",
     propertyType: "Duplex",
     serviceType: "Rent",
     unit: "15",
@@ -338,7 +338,7 @@ export const properties = [
   {
     id: "0067452",
     name: "TM Burrows",
-    development: "TM Burrrows",
+    development: "TM Burrows",
     propertyType: "Duplex",
     serviceType: "Rent",
     unit: "15",
@@ -362,7 +362,7 @@ export const properties = [
   {
     id: "0067452",
     name: "TM Burrows",
-    development: "TM Burrrows",
+    development: "TM Burrows",
     propertyType: "Duplex",
     serviceType: "Rent",
     unit: "15",
@@ -386,7 +386,7 @@ export const properties = [
   {
     id: "0067452",
     name: "TM Burrows",
-    development: "TM Burrrows",
+    development: "TM Burrows",
     propertyType: "Duplex",
     serviceType: "Rent",
     unit: "15",
@@ -410,7 +410,7 @@ export const properties = [
   {
     id: "0067452",
     name: "TM Burrows",
-    development: "TM Burrrows",
+    development: "TM Burrows",
     propertyType: "Duplex",
     serviceType: "Rent",
     unit: "15",
@@ -434,7 +434,7 @@ export const properties = [
   {
     id: "0067452",
     name: "TM Burrows",
-    development: "TM Burrrows",
+    development: "TM Burrows",
     propertyType: "Duplex",
     serviceType: "Rent",
     unit: "15",
@@ -458,7 +458,7 @@ export const properties = [
   {
     id: "0067452",
     name: "TM Burrows",
-    development: "TM Burrrows",
+    development: "TM Burrows",
     propertyType: "Duplex",
     serviceType: "Rent",
     unit: "15",
@@ -482,7 +482,7 @@ export const properties = [
   {
     id: "0067452",
     name: "TM Burrows",
-    development: "TM Burrrows",
+    development: "TM Burrows",
     propertyType: "Duplex",
     serviceType: "Rent",
     unit: "15",

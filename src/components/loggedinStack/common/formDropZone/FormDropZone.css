@@ -1,0 +1,90 @@
+.formDropZone {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-start;
+    margin-bottom: 20px;
+  }
+  
+  .formDropZoneLabel {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 20px;
+    color: var(--color-headerText);
+    margin-bottom: 10px;
+  }
+  
+  .formDropZoneInput {
+    border: 1px solid var(--color-green);
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--color-headerText);
+    display: flex;
+    width: 90% ;
+    display: flex;
+    justify-content: center;
+    padding: 40px 2%;
+    margin-bottom: 10px;
+    resize: none;
+  }
+
+  .formDropZonedrop{
+    cursor: pointer;
+  }
+
+  .formDropZoneDropZone{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .formDropZoneAttachment{
+    display: grid;
+    place-items: center;
+  }
+  
+  .formDropZoneError {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--color-error);
+  }
+
+  .formDropZoneGallery{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .formDropZoneImage{
+    width: 220px;
+    height: 160px;
+    border-radius: 20px;
+    overflow: hidden;
+    object-fit: cover;
+    background-color: var(--color-imageBackground);
+    margin-block: 10px;
+  }
+  
+  @media (max-width: 600px) {
+    .formDropZoneInput {
+      width: 85%;
+      padding-inline: 20px;
+      font-size: 14px;
+    }
+  
+    .formDropZoneLabel {
+      font-size: 14px;
+    }
+  
+    .formDropZoneError {
+      font-size: 12px;
+    }
+  }
+  
