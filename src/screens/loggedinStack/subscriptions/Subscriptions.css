@@ -1,0 +1,210 @@
+.subscriptions{
+    position: relative;
+}
+
+.subscriptionsContent {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    overflow-y: scroll;
+    justify-content: flex-start;
+    align-items: center;
+    margin-block: 20px;
+  }
+  
+  .subscriptionsContent::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .subscriptionsContentHeader{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 99%;
+      margin-top: 5px;
+  }
+  
+  .addsubscriptionsButton{
+      font-family: "Roboto";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 19px;
+      text-align: center;
+      color: #ffffff;
+      cursor: pointer;
+      background:var(--color-primary);
+      height: 40px;
+      border: 1px solid var(--color-primary);
+      border-radius: 15px;
+      display: flex;
+      align-items: center;
+      padding-inline: 30px;
+      margin-left: 20px;
+      width: fit-content;
+  }
+  
+  .subscriptionsInfoCards{
+      display: flex;
+      flex: 1;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: center;
+  }
+  
+  .subscriptionssubscriptions{
+      display: flex;
+      flex-direction: column;
+      margin-top: 30px;
+      width: 100%;
+  }
+  
+  .subscriptionsListHeader{
+      display: flex;
+      flex: 1;
+  }
+  
+  
+  @media (max-width:1300px){
+      .subscriptionsListHeader{
+          display: none;
+      }
+  }
+  
+  @media (max-width:1070px){
+      .subscriptionsContentHeader{
+          display: flex;
+          flex-direction: column;
+      }
+  
+      .subscriptionsInfoCards{
+          margin-top: 10px;
+          justify-content: center;
+      }
+  }
+  
+  @media (max-width:600px){
+      .subscriptionsContentHeader{
+          align-items: center;
+      }
+      
+      .subscriptionsInfoCards{
+          align-items: center;
+          justify-content: center;
+      }
+  }
+
+  .subscriptionsRowHeader{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.subscriptionsRowHeaderLeft{
+    display: flex;
+    align-items: center;
+    width: 50%;
+    gap: 10px;
+}
+
+.homeOwerAddButton{
+    border-radius: 15px;
+  background-color: var(--color-primary);
+  display: flex;
+  padding: 10px 20px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  color: var(--color-white);
+  width: fit-content;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.subscriptionsRowSearch{
+    flex: 1;
+}
+
+.subscriptionsRowHeaderRight{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    width: 50%;
+    justify-content: flex-end;
+}
+
+.subscriptionsRowFilterButton {
+  border-radius: 15px;
+  background-color: var(--color-primary);
+  display: flex;
+  gap: 10px;
+  padding: 10px 0;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  color: var(--color-white);
+  width: 120px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.subscriptionsRowFilterIcon {
+  display: flex;
+  align-items: center;
+}
+
+
+.subscriptionsRowRefresh{
+    border-radius: 15px;
+  background-color: var(--color-orange);
+  display: flex;
+  padding: 10px;
+  font-weight: 600;
+  font-size: 28px;
+  color: var(--color-white);
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  width: fit-content;
+}
+
+@media (max-width:1120px){
+    .homeOwerAddButton{
+        font-size: 16px;
+    }
+
+    .subscriptionsRowFilterButton{
+        font-size: 16px;
+    }
+
+    .subscriptionsRowRefresh{
+        font-size: 24px;
+    }
+}
+
+@media (max-width:1050px){
+    .subscriptionsRowHeader{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .subscriptionsRowHeaderLeft{
+        width: 80%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .subscriptionsRowHeaderRight{
+        width: 100%;
+        justify-content: center;
+        margin-top: 10px;
+    }
+}

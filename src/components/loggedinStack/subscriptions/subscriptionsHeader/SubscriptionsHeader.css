@@ -1,0 +1,40 @@
+.subscriptionsHeader {
+    display: flex;
+    flex: 1;
+    padding: 15px 20px;
+    background-color: var(--color-white);
+    border: 1px solid #eeeeee;
+    border-radius: 20px 20px 0px 0px;
+    align-items: flex-start;
+  }
+  
+  .subscriptionsHeaderTitles{
+      display: flex;
+      flex: 1;
+      align-items: flex-start;
+      justify-content: space-between;
+      padding-left: 10px;
+      padding-top: 2px;
+  }
+  
+  .subscriptionsHeaderTitle {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
+    color: #171b1e;
+    width: 100px;
+  }
+  
+  .subscriptionsHeaderTitleLarge{
+      width: 150px;
+  }
+  
+  .subscriptionsHeaderTitleSmall{
+      width: 50px;
+  }
+  
+  .subscriptionsHeaderEnd{
+      width: 20px;
+  }

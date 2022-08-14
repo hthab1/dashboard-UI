@@ -1,0 +1,150 @@
+.property {
+    display: flex;
+    box-shadow: var(--card-shadow);
+    width: 99%;
+    align-self: center;
+    margin-block: 10px;
+    border-radius: 10px;
+    background-color: var(--color-white);
+  }
+  
+  .propertyContent {
+    display: flex;
+    flex: 1;
+    margin: 20px;
+  }
+  
+  .propertyImage {
+    background-color: var(--color-imageBackground);
+    width: 70px;
+    height: 70px;
+    border-radius: 10px;
+    margin-right: 20px;
+    object-fit: cover;
+  }
+  
+  .propertyContentInfo {
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+  }
+  
+  .propertyContentInfoSegments {
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .propertyContentInfoSegment {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-inline: 5px;
+  }
+  
+  .propertyId {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    color: #00695e;
+  }
+  
+  .propertyTimestamp {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    color: #737b8b;
+    line-height: 24px;
+  }
+  
+  .propertySegmentTitle {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: #737b8b;
+    margin-bottom: 10px;
+  }
+  
+  .propertySegmentMainText {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    color: #273240;
+    line-height: 30px;
+    width: 130px;
+    word-wrap: break-word;
+  }
+  
+  .propertyContentInfoButton {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    color: #00695e;
+    padding: 10px;
+    border: 1px solid #00695e;
+    border-radius: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    width: fit-content;
+    height: fit-content;
+  }
+  
+  .propertyMore {
+    position: relative;
+  }
+  
+  .propertyMoreIcon {
+    font-size: 20px;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .propertyDropdown {
+    position: absolute;
+    background-color: var(--color-white);
+    box-shadow: var(--card-shadow);
+    width: 170px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    right: 30px;
+    top: 30px;
+  }
+  
+  .propertyDropdownChoice {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #737b8b;
+    cursor: pointer;
+    transition: all 100ms ease-in-out;
+  }
+  
+  .propertyDropdownChoice:hover{
+      transform: scale(1.07);
+  }
+  
+  @media (max-width: 600px) {
+    .propertyImage {
+      margin-right: 10px;
+    }
+  
+    .propertyContentInfoSegment {
+      width: 150px;
+    }
+  
+    .propertySegmentMainText {
+      font-size: 14px;
+    }
+  }
+  

@@ -68,7 +68,7 @@ function TransactionCard({
       >
         <div className="modalMark">
           <div className="modalMarkQuestion">
-            Are you sure you want to sonfirm payment?
+            Are you sure you want to confirm payment?
           </div>
           <div className="modalMarkButtons">
             <div

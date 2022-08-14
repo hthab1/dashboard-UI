@@ -1,0 +1,183 @@
+.addNews {
+  height: 100vh;
+}
+
+.addNewsHeader {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.addNewsHeaderLeft {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 26px;
+  color: #000000;
+  display: flex;
+}
+
+.addNewsBack {
+  font-size: 16px;
+  display: grid;
+  place-items: center;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.addNewsContent {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  overflow-y: scroll;
+  justify-content: center;
+  align-items: flex-start;
+  margin-block: 20px;
+}
+
+.addNewsContent::-webkit-scrollbar {
+  display: none;
+}
+
+.addNewsForm{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5%;
+    width: 100%;
+}
+
+.addNewsFormLeft{
+    display: flex;
+    flex-direction: column;
+}
+
+.addNewsImageBackground {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-imageBackground);
+  width: 220px;
+  height: 180px !important;
+  cursor: pointer;
+}
+
+.addNewsImage {
+  width: 220px;
+  height: 180px;
+  object-fit: cover;
+}
+
+.addNewsImagePlaceholder {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 26px;
+  color: #948a8a;
+}
+
+.addNewsError {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--color-error);
+  margin-top: 10px;
+}
+
+.addNewsFormRight{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.addNewsTitle{
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 26px;
+}
+
+.addNewsDetails{
+    margin-top: 20px;
+}
+
+.addNewsTitleInput{
+    background-color: var(--color-imageBackground);
+    padding: 15px;
+    display: flex;
+    min-width: 250px;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 26px;
+    display: flex;
+    width: 100%;
+    margin-top: 10px;
+    max-width: 600px;
+    resize: none;
+}
+
+.addNewsPostButton{
+    font-family: 'Roboto';
+font-style: normal;
+font-weight: 500;
+font-size: 14px;
+line-height: 16px;
+text-align: center;
+background-color: var(--color-primary);
+color: var(--color-white);
+padding: 10px 30px;
+cursor: pointer;
+margin-top: 30px;
+margin-bottom: 20px;
+width: fit-content;
+height: fit-content;
+border-radius: 100px;
+}
+
+.addNewsButtonContainer{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    min-width: 250px;
+    max-width: 600px;
+
+}
+
+.addNewsSuccess{
+    text-align: center;
+    color: var(--color-green);
+    width: 100%;
+    min-width: 250px;
+    max-width: 600px;
+}
+
+@media (max-width: 600px) {
+  .addNewsHeaderLeft {
+    font-size: 16px;
+  }
+
+
+  .addNewsFormRight{
+    width: 100%;
+  }
+
+  .addNewsTitleInput{
+    width: 90%;
+  }
+
+  .addNewsSuccess{
+    width: 90%;
+  }
+
+  .addNewsButtonContainer{
+    width: 90%;
+  }
+}

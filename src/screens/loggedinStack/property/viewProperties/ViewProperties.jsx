@@ -1,56 +1,52 @@
 import React, { useEffect, useRef, useState } from "react";
+import "./Properties.css";
 import Header from "../../../../components/loggedinStack/Header";
-import "./Developments.css";
 import { useDispatch } from "react-redux";
-import { useNavigate } from "react-router-dom";
 import { setActiveTab } from "../../../../reducers/sidebarReducer";
+import { useNavigate } from "react-router-dom";
 import Pagination from "../../../../components/loggedinStack/common/pagination/Pagination";
 import Property from "../../../../components/loggedinStack/properties/property/Property";
 import { properties } from "../../../../data/properties";
-import Development from "../../../../components/loggedinStack/properties/development/Development";
-import { developments } from "../../../../data/developments";
+import { BsChevronLeft } from "react-icons/bs";
 
-function Developments() {
+function ViewProperties() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const listRef = useRef();
   const [items, setItems] = useState([]);
-  const data = developments;
+  const data = properties;
 
   useEffect(() => {
     dispatch(setActiveTab("manage developments"));
   }, []);
   return (
-    <div className="developments loadedPage">
+    <div className="properties loadedPage">
       <Header pageName="Developments" />
       <div className="board">
         <div className="boardContent">
-          <div className="viewDevelopmentsHeader">
-            <div className="viewDevelopmentsHeaderLeft">View Developments</div>
-            <div className="viewDevelopmentsHeaderRight">
-              <div className="viewDevelopmentsHeaderButtonRight">
-                Add Development
+          <div className="viewPropertiesHeader">
+            <div className="viewPropertiesHeaderLeft">
+              <div className="viewPropertiesBack" onClick={()=>navigate(-1)}>
+                <BsChevronLeft />
               </div>
+              View Properties
             </div>
           </div>
-          <div className="viewDevelopmentsContent">
+          <div className="viewPropertiesContent">
             <span ref={listRef}></span>
-            <div className="viewDevelopmentsviewDevelopments">
+            <div className="viewPropertiesviewProperties">
               {items.map((item, index) => (
-                <Development
+                <Property
                   key={index}
                   development={item.development}
-                  homeOwners={item.homeOwners}
-                  location={item.location}
-                  properties={item.properties}
-                  subscribers={item.subscribers}
-                  tenants={item.tenants}
                   image={item.image}
-                  onView={() => {
-                    navigate(`/property/developments/properties/${item.id}`);
-                  }}
+                  name={item.name}
+                  price={item.price}
+                  propertyType={item.propertyType}
+                  serviceType={item.serviceType}
+                  unit={item.unit}
                   // onEdit={() =>
-                  //   navigate(`/viewDevelopments/editNews/${item.id}`, {
+                  //   navigate(`/viewProperties/editNews/${item.id}`, {
                   //     state: {
                   //       news: item,
                   //     },
@@ -60,7 +56,7 @@ function Developments() {
               ))}
             </div>
           </div>
-          <div className="viewDevelopmentsPageContainer">
+          <div className="viewPropertiesPageContainer">
             <Pagination
               itemsPerPage={10}
               items={data}
@@ -76,4 +72,4 @@ function Developments() {
   );
 }
 
-export default Developments;
+export default ViewProperties;

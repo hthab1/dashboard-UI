@@ -41,6 +41,9 @@ import EditProduct from "../screens/loggedinStack/inventory/addProduct/EditProdu
 import Transactions from "../screens/loggedinStack/transactions/Transactions";
 import AddStaff from "../screens/loggedinStack/staff/addStaff/AddStaff";
 import EditStaff from "../screens/loggedinStack/staff/addStaff/EditStaff";
+import AddNews from "../screens/loggedinStack/announcements/addNews/AddNews";
+import EditNews from "../screens/loggedinStack/announcements/addNews/EditNews";
+import ViewProperties from "../screens/loggedinStack/property/viewProperties/ViewProperties";
 
 function LoggedinStack() {
   const on = useSelector((state) => state.sidebar.mobileSidebar);
@@ -123,6 +126,7 @@ function LoggedinStack() {
             <Route path="/property/addProperty" element={<AddProperty />} />
             <Route path="/property/properties" element={<Properties />} />
             <Route path="/property/developments" element={<Developments />} />
+            <Route path="/property/developments/properties/:developmentId" element={<ViewProperties />} />
 
             {/* subscriptions routes */}
             <Route path="/subscriptions" element={<Subscriptions />} />
@@ -163,6 +167,8 @@ function LoggedinStack() {
 
             {/* announcements Routes */}
             <Route path="/announcements" element={<Announcements />} />
+            <Route path="/announcements/addNews" element={<AddNews />} />
+            <Route path="/announcements/editNews/:newsId" element={<EditNews />} />
 
             {/* settings Routes */}
             <Route path="/settings" element={<Settings />} />

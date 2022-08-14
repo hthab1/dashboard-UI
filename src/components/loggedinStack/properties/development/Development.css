@@ -1,0 +1,157 @@
+.development {
+    display: flex;
+    box-shadow: var(--card-shadow);
+    width: 99%;
+    align-self: center;
+    margin-block: 10px;
+    border-radius: 10px;
+    background-color: var(--color-white);
+  }
+  
+  .developmentContent {
+    display: flex;
+    flex: 1;
+    margin: 20px;
+  }
+  
+  .developmentImage {
+    background-color: var(--color-imageBackground);
+    width: 70px;
+    height: 70px;
+    border-radius: 10px;
+    margin-right: 20px;
+    object-fit: cover;
+  }
+  
+  .developmentContentInfo {
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+  }
+  
+  .developmentContentInfoSegments {
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .developmentContentInfoSegment {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-inline: 5px;
+  }
+  
+  .developmentId {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    color: #00695e;
+  }
+  
+  .developmentTimestamp {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    color: #737b8b;
+    line-height: 24px;
+  }
+  
+  .developmentSegmentTitle {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: #737b8b;
+    margin-bottom: 10px;
+  }
+  
+  .developmentSegmentMainText {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    color: #273240;
+    line-height: 30px;
+    width: 130px;
+    word-wrap: break-word;
+  }
+
+  .developmentContentInfoLarge{
+    width: 150px;
+  }
+  
+  .developmentContentInfoButton {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    color: #00695e;
+    padding: 10px;
+    border: 1px solid #00695e;
+    border-radius: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    width: fit-content;
+    height: fit-content;
+  }
+  
+  .developmentMore {
+    position: relative;
+  }
+  
+  .developmentMoreIcon {
+    font-size: 20px;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .developmentDropdown {
+    position: absolute;
+    background-color: var(--color-white);
+    box-shadow: var(--card-shadow);
+    width: 170px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    right: 30px;
+    top: 30px;
+  }
+  
+  .developmentDropdownChoice {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #737b8b;
+    cursor: pointer;
+    transition: all 100ms ease-in-out;
+  }
+
+  .developmentDropdownChoice:hover{
+      transform: scale(1.07);
+  }
+  
+  @media (max-width: 600px) {
+    .developmentImage {
+      margin-right: 10px;
+    }
+  
+    .developmentContentInfoSegment {
+      width: 150px;
+    }
+  
+    .developmentSegmentMainText {
+      font-size: 14px;
+    }
+    .developmentContentInfoLarge{
+        width: 160px;
+    }
+  }
+  

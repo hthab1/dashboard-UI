@@ -25,14 +25,12 @@ function Announcements() {
       <div className="board">
         <div className="boardContent">
           <div className="announcementsHeader">
-            <div className="announcementsHeaderLeft">
-                News/ Announcements
-            </div>
+            <div className="announcementsHeaderLeft">News/ Announcements</div>
             <div className="announcementsHeaderRight">
               <div
                 className="announcementHeaderButtonRight"
                 onClick={() => {
-                  // navigate("/users/announcements/addannouncement")
+                  navigate("/announcements/addNews");
                 }}
               >
                 + Add news
@@ -47,7 +45,14 @@ function Announcements() {
                   key={index}
                   title={item.title}
                   image={item.image}
-                  news={item.news}
+                  news={item.details}
+                  onEdit={() =>
+                    navigate(`/announcements/editNews/${item.id}`, {
+                      state: {
+                        news: item,
+                      },
+                    })
+                  }
                 />
               ))}
             </div>
