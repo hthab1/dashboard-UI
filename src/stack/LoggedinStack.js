@@ -50,6 +50,8 @@ import AddDevelopment from "../screens/loggedinStack/property/addProperty/AddDev
 import EditDevelopment from "../screens/loggedinStack/property/addProperty/EditDevelopment";
 import EditProperty from "../screens/loggedinStack/property/addProperty/EditProperty";
 import EditDevelopmentProperty from "../screens/loggedinStack/property/addProperty/EditDevelopmentProperty";
+import EditProfile from "../screens/loggedinStack/settings/editProfile/EditProfile";
+import ChangePassword from "../screens/loggedinStack/settings/editProfile/ChangePassword";
 
 function LoggedinStack() {
   const on = useSelector((state) => state.sidebar.mobileSidebar);
@@ -208,6 +210,11 @@ function LoggedinStack() {
 
             {/* settings Routes */}
             <Route path="/settings" element={<Settings />} />
+            <Route path="/settings/editProfile" element={<EditProfile />} />
+            <Route
+              path="/settings/changePassword"
+              element={<ChangePassword />}
+            />
 
             {/* staff Routes */}
             <Route path="/staff" element={<Staff />} />
@@ -221,3 +228,9 @@ function LoggedinStack() {
 }
 
 export default LoggedinStack;
+
+
+
+
+
+

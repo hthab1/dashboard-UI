@@ -23,7 +23,7 @@ function AddDevelopmentForm({
   });
 
   return (
-    <div className="addForm">
+    <div className="addPropertyForm">
       <Formik
         initialValues={{ name: name, location: location, image: image }}
         onSubmit={(values, actions) => {

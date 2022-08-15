@@ -15,6 +15,7 @@ function AddStaff() {
   const [email, setEmail] = useState("")
   const [phone, setPhone] = useState("")
   const [role, setRole] = useState("")
+  const [image, setImage] = useState("")
 
   useEffect(() => {
     dispatch(setActiveTab("staff"));
@@ -39,6 +40,8 @@ function AddStaff() {
                 email={email}
                 phone={phone}
                 role={role}
+                image={image}
+                setImage={setImage}
                 setFirstName={setFirstName}
                 setLastName={setLastName}
                 setEmail={setEmail}

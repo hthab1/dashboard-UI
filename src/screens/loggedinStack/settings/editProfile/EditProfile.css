@@ -1,0 +1,35 @@
+.editProfileContent{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow-y: scroll;
+}
+
+.editProfileContentHeader{
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 26px;
+display: flex;
+}
+
+.editProfileBack{
+    display: grid;
+    place-items: center;
+    margin-right: 10px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.editProfileContentForm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-block: 50px;
+    flex: 1;
+}
+
+.editProfileContent::-webkit-scrollbar{
+    display: none;
+}

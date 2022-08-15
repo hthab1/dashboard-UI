@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "./AddStaff.css";
+import "./EditProfile.css";
 import { useDispatch } from "react-redux";
 import Header from "../../../../components/loggedinStack/Header";
 import { setActiveTab } from "../../../../reducers/sidebarReducer";
@@ -7,35 +7,35 @@ import { BsChevronLeft } from "react-icons/bs";
 import { useLocation, useNavigate } from "react-router-dom";
 import AddStaffForm from "../../../../components/loggedinStack/staff/addStaffForm/AddStaffForm";
 
-function EditStaff() {
+function EditProfile() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const location = useLocation();
-  const staff = location.state.staff;
-  const [firstName, setFirstName] = useState(staff.firstName);
-  const [lastName, setLastName] = useState(staff.lastName);
-  const [email, setEmail] = useState(staff.email);
-  const [phone, setPhone] = useState(staff.phone);
-  const [role, setRole] = useState(staff.role);
-  const [image, setImage] = useState(staff.image)
+  const profile = location.state.profile;
+  const [firstName, setFirstName] = useState(profile.firstName);
+  const [lastName, setLastName] = useState(profile.lastName);
+  const [email, setEmail] = useState(profile.email);
+  const [phone, setPhone] = useState(profile.phone);
+  const [role, setRole] = useState(profile.role);
+  const [image, setImage] = useState(profile.image)
 
   useEffect(() => {
-    dispatch(setActiveTab("staff"));
+    dispatch(setActiveTab("settings"));
   }, []);
 
   return (
     <div className="addStaff loadedPage">
-      <Header pageName="Edit Staff" />
+      <Header pageName="Settings" />
       <div className="board">
         <div className="boardContent">
-          <div className="addStaffContent">
-            <div className="addStaffContentHeader">
-              <div className="addStaffBack" onClick={() => navigate(-1)}>
+          <div className="editProfileContent">
+            <div className="editProfileContentHeader">
+              <div className="editProfileBack" onClick={() => navigate(-1)}>
                 <BsChevronLeft />
               </div>
-              Edit Staff
+              Edit Profile
             </div>
-            <div className="addStaffContentForm">
+            <div className="editProfileContentForm">
               <AddStaffForm
                 firstName={firstName}
                 lastName={lastName}
@@ -43,13 +43,13 @@ function EditStaff() {
                 phone={phone}
                 role={role}
                 image={image}
-                setImage={setImage}
                 setFirstName={setFirstName}
                 setLastName={setLastName}
                 setEmail={setEmail}
                 setPhone={setPhone}
                 setRole={setRole}
-                buttonName="Update Staff"
+                setImage={setImage}
+                buttonName="Update profile"
               />
             </div>
           </div>
@@ -59,4 +59,4 @@ function EditStaff() {
   );
 }
 
-export default EditStaff;
+export default EditProfile;

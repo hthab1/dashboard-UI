@@ -1,0 +1,121 @@
+.settings {
+  height: 100vh;
+}
+
+.settingsHeader {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.settingsHeaderLeft {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 26px;
+  color: #000000;
+}
+
+.settingsHeaderRight {
+  display: flex;
+  flex-direction: row;
+}
+
+.settingHeaderButtonRight {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  color: #ffffff;
+  cursor: pointer;
+  background: var(--color-primary);
+  height: 40px;
+  border: 1px solid var(--color-primary);
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  padding-inline: 30px;
+  margin-left: 20px;
+}
+
+.settingsContent {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  overflow-y: scroll;
+  justify-content: center;
+  align-items: flex-start;
+  margin-block: 20px;
+}
+
+.settingssettings {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.settingsContent::-webkit-scrollbar {
+  display: none;
+}
+
+.settingsAccountImage{
+    width: 200px;
+    height: 220px;
+    object-fit: cover;
+    background-color: var(--color-imageBackground);
+    margin-bottom: 20px;
+}
+
+.settingsAccountInfo{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.settingsAccountTitle{
+    font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 19px;
+  margin-top: 20px;
+}
+
+.settingsAccountDetail{
+    font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  color: #000000;
+  margin-top: 5px;
+}
+
+.settingsAccountButtonBottom{
+    margin-block: 30px 50px;
+}
+
+
+
+@media (max-width: 980px) {
+  .settingHeaderButtonRight {
+    font-size: 14px;
+    padding-inline: 20px;
+  }
+}
+
+@media (max-width: 645px) {
+  .settingHeaderButtonRight {
+    font-size: 14px;
+    padding-inline: 0;
+    width: fit-content;
+    padding-inline: 30px;
+    display: flex;
+    justify-content: center;
+  }
+}
